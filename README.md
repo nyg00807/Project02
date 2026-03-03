@@ -10,10 +10,10 @@
   </tr>
   <tr>
     <th valign="top">
-      <img src="https://via.placeholder.com/500x300?text=Original+PlayStation+Website" alt="리뉴얼 전">
+      <img src="https://github.com/user-attachments/assets/e10a0e8f-46df-4d93-ae95-ca34712e93da" alt="리뉴얼 전">
     </th>
     <th valign="top">
-      <img src="https://via.placeholder.com/500x300?text=Renewal+PlayStation+Website" alt="리뉴얼 후">
+      <img src="https://github.com/user-attachments/assets/2f55717d-ce47-43ea-91e4-ceeda8d09479" alt="리뉴얼 후">
     </th>
   </tr>
 </table>
@@ -62,7 +62,7 @@
 ## :link: 작업 결과물 & 문서 링크
 
 - :globe_with_meridians: **리뉴얼 웹사이트**
-  :point_right: (배포 링크 추가 예정)
+  :point_right: (https://nyg00807.github.io/Project02/)
 
 - :triangular_ruler: **기획서 (Figma)**
   :point_right: (https://www.figma.com/design/wxrGeANcFvHwiNfsG1xb6k/-%ED%94%8C%EB%A0%88%EC%9D%B4%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%85%98-%EB%A6%AC%EB%89%B4%EC%96%BC-_Team-Astro?node-id=1-7&t=gs1BrHQIBibpZdP5-1)
