@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/common/import.css">
+</head>
+<body>
+  <!-- 해당 파일 용도
+   - 컴포넌트 그룹 요소들 정의 
+    - 페이지별 script 파일의 작성 흐름과 형태 정의
+  -->
+
+  <!-- ===== h1~h3 태그 Heading Title ===== -->
+  <h1>국문 헤딩 타이틀</h1>
+  <h2>국문 헤딩 타이틀</h2>
+  <h3>국문 헤딩 타이틀</h3>
+  <h1>Eng Heading Title</h1>
+  <h2>Eng Heading Title</h2>
+  <h3>Eng Heading Title</h3>
+
+  <!-- ===== 타이틀용 폰트 사이즈 ===== -->
+  <p class="title--l">국문 타이틀 라지 / Eng Title Large</p>
+  <p class="title--m">국문 타이틀 미디움 / Eng Title Medium</p>
+  <p class="title--s">국문 타이틀 스몰 / Eng Title Small</p>
+  <p class="title--xs">국문 타이틀 엑스스몰 / Eng Title XSmall</p>
+
+  <!-- ===== 본문용 폰트 사이즈 ===== -->
+  <p class="text--l">국문 본문 라지 / Eng Body Large</p>
+  <p class="text--m">국문 본문 미디움 / Eng Body Medium</p>
+  <p class="text--s">국문 본문 스몰 / Eng Body Small</p>
+  <p class="text--xs">국문 본문 엑스스몰 / Eng Body XSmall</p>
+
+
+
+  <!-- ===== Bootstrap Icon 크기별 정의 ===== -->
+  <i class="bi bi-playstation icon--xsmall"></i>
+  <i class="bi bi-playstation icon--small"></i>
+  <i class="bi bi-playstation icon--medium"></i>
+  <i class="bi bi-playstation icon--large"></i>
+
+
+
+  <!-- ===== 버튼 그룹 및 사이즈, 스타일 정의 ===== -->
+  <div class="page-button">
+    <div class="page-button-left">
+      <button class="btn btn--medium btn--solid-blue"><span>메인 버튼</span></button>
+      <button class="btn btn--medium btn--solid-purple"><span>서브 버튼</span></button>
+    </div>
+    <div class="page-button-center">
+      <button class="btn btn--large btn--solid-blue"><span>메인 버튼</span></button>
+      <button class="btn btn--large btn--solid-purple"><span>서브 버튼</span></button>
+    </div>
+    <div class="page-button-right">
+      <button class="btn btn--large btn--line-blue"><span>메인 버튼</span><div class="dot"></div></button>
+      <button class="btn btn--large btn--line-purple"><span>서브 버튼</span><div class="dot"></div></button>
+      <button class="btn btn--medium btn--line-blue"><span>메인 버튼</span><div class="dot"></div></button>
+      <button class="btn btn--medium btn--line-purple"><span>서브 버튼</span><div class="dot"></div></button>
+    </div>
+  </div>
+
+
+
+  <!-- ===== 탭버튼 사이즈 및 스타일 정의 ===== -->
+  <!-- 탭버튼 : medium & light -->
+  <div class="tab-wrap--medium tab-wrap--light">
+    <label class="tab">
+      <input type="radio" name="tab01" id="tab11" checked>
+      <span class="tab__nm">Tab Button 1</span>
+    </label>
+    <label class="tab">
+      <input type="radio" name="tab01" id="tab12">
+      <span class="tab__nm">Tab Button 2</span>
+    </label>
+    <label class="tab">
+      <input type="radio" name="tab01" id="tab13">
+      <span class="tab__nm">Tab Button 3</span>
+    </label>
+  </div>
+
+  <!-- 탭버튼 : small & light -->
+  <div class="tab-wrap--small tab-wrap--light">
+    <label class="tab">
+      <input type="radio" name="tab03" id="tab31" checked>
+      <span class="tab__nm">Tab Button 1</span>
+    </label>
+    <label class="tab">
+      <input type="radio" name="tab03" id="tab32">
+      <span class="tab__nm">Tab Button 2</span>
+    </label>
+    <label class="tab">
+      <input type="radio" name="tab03" id="tab33">
+      <span class="tab__nm">Tab Button 3</span>
+    </label>
+  </div>
+
+  <!-- 탭버튼 : medium & dark -->
+  <div class="tab-wrap--medium tab-wrap--dark">
+    <label class="tab">
+      <input type="radio" name="tab02" id="tab21" checked>
+      <span class="tab__nm">Tab Button 1</span>
+    </label>
+    <label class="tab">
+      <input type="radio" name="tab02" id="tab22">
+      <span class="tab__nm">Tab Button 2</span>
+    </label>
+    <label class="tab">
+      <input type="radio" name="tab02" id="tab23">
+      <span class="tab__nm">Tab Button 3</span>
+    </label>
+  </div>
+
+  <!-- 탭버튼 : small & dark -->
+  <div class="tab-wrap--small tab-wrap--dark">
+    <label class="tab">
+      <input type="radio" name="tab04" id="tab41" checked>
+      <span class="tab__nm">Tab Button 1</span>
+    </label>
+    <label class="tab">
+      <input type="radio" name="tab04" id="tab42">
+      <span class="tab__nm">Tab Button 2</span>
+    </label>
+    <label class="tab">
+      <input type="radio" name="tab04" id="tab43">
+      <span class="tab__nm">Tab Button 3</span>
+    </label>
+  </div>
+
+
+
+  <!-- ===== 입력필드 정의 ===== -->
+  <!-- input: text, search, password -->
+  <form>
+    <input type="text" class="input-field--medium" placeholder="Text Medium...">
+    <input type="text" class="input-field--small" placeholder="Text Small...">
+
+    <input type="password" class="input-field--medium" placeholder="Password Medium...">
+    <input type="password" class="input-field--small" placeholder="Password Small...">
+
+    <input type="search" class="input-field--medium" placeholder="Search Medium...">
+    <input type="search" class="input-field--small" placeholder="Search Small...">
+  </form>
+
+  <script>
+    /* Break Point Constant */
+    const LAPTOP_BREAK_POINT = 1780;
+    const TAB_BREAK_POINT = 1024;
+    const MO_BREAK_POINT = 768;
+
+    /* ========== DOM Element  ========== */
+    // 여기에 화면 태그 요소를 변수로 선언
+
+    /* ========== Define Variables  ========== */
+    // 화면 태그 요소가 아닌 그 외 변수를 여기에 선언
+
+
+    /* ========== Execute Functions  ========== */
+    // 여기에 실행문 작성
+    // document.addEventListener('click', exampleFunc);
+
+    /* ========== Define Functions  ========== */
+    // 여기에 함수 정의
+    // function exampleFunc(){ ... }
+
+    /* ========== Responsive - Execute function  ========== */
+    // 아래 이벤트 리스너와 초기 실행 필수
+    window.addEventListener('resize', screenResize);
+    screenResize();
+
+    // 반응형에서 실시간으로 변경돼야 하는 기능 실행
+    function screenResize(){
+      const screenW = window.innerWidth;
+
+      if(screenW <= MO_BREAK_POINT){
+        enterMo();
+      }
+      else if(MO_BREAK_POINT < screenW && screenW <= TAB_BREAK_POINT){
+        enterTab();
+      }
+      else if(TAB_BREAK_POINT < screenW && screenW <= LAPTOP_BREAK_POINT){
+        enterLaptop();
+      }
+      else{
+        enterPc();
+      }
+    }
+
+    // 각 기기 사이즈에서  실행되어야 할 함수들을 분류
+    function enterMo(){
+
+    }
+
+    function enterTab(){
+
+    }
+
+    function enterLaptop(){
+
+    }
+
+    function enterPc(){
+
+    }
+
+    /* ========== Responsive - Define function  ========== */
+    // 각 기기 사이즈에서의 특정 기능을 함수로 정의
+  </script>
+</body>
+</html>

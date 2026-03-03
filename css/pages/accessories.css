@@ -1,0 +1,1327 @@
+/* ========== section: 메인비주얼 ========== */
+#ps5MainVisualSec{
+  height: 100vh;
+  padding: 0;
+}
+.ps5mainvisual{
+  height: 100%;
+  position: relative;
+}
+.mainvisual__backImg{
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  overflow: hidden;
+}
+.mainvisual__backImg::before{
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  background: #12121299;
+}
+.mainvisual__backImg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 메인비주얼 내부 컨텐츠 */
+.mainvisual__content{
+  width: 100%;
+  padding: 165px 0 96px 0;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainvisual__img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainvisual__img img{
+  width: 1600px;
+  height: auto;
+  object-position: center;
+  object-fit: cover;
+}
+.mainvisual__text{
+  color: var(--white-100);
+}
+.mainvisual__title{
+  font-size: 96px;
+}
+.mainvisual__desc{
+  font-size: 28px;
+  padding: 8px 0 48px 0;
+}
+
+
+
+/* ==========section: 카드 섹션 ========== */
+.ps5-game{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "c1 c2 c3"
+    "c4 c5 ."
+    ".  c8 c9";
+  gap: var(--basic-gap);
+}
+.ps5-game__card{
+  border-radius: var(--border-radius-20);
+  overflow: hidden;
+}
+#ps5GameCard01{
+  grid-area: c1;
+  aspect-ratio: 1 / 1;
+}
+#ps5GameCard02{
+  grid-area: c2;
+  aspect-ratio: 1 / 1;
+}
+#ps5GameCard03{
+  grid-area: c3;
+  aspect-ratio: 1 / 1;
+  background: var(--blue-500);
+  transform: translateX(-541px);
+  z-index: -1;
+  opacity: 0;
+  transition: .7s;
+}
+#ps5GameCard03.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+#ps5GameCard04{
+  grid-area: c4;
+  aspect-ratio: 1 / 1;
+}
+#ps5GameCard05{
+  grid-area: c5;
+  aspect-ratio: 1 / 1;
+  background: var(--blue-500);
+  transform: translateX(-541px);
+  z-index: -1;
+  opacity: 0;
+  transition: .7s;
+}
+#ps5GameCard05.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+#ps5GameCard08{
+  grid-area: c8;
+  aspect-ratio: 1 / 1;
+}
+#ps5GameCard09{
+  grid-area: c9;
+  aspect-ratio: 1 / 1;
+  background: var(--blue-500);
+  transform: translateX(-541px);
+  z-index: -1;
+  opacity: 0;
+  transition: .7s;
+}
+#ps5GameCard09.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+.ps5-game__content{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.ps5-game__content video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 카드 이미지 */
+.ps5-game__bg{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.ps5-game__img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 300px;
+  left: 150px;
+}
+.ps5-game__img img{
+  width: 160px;
+  height: auto;
+  object-fit: cover;
+}
+.ps5-game__bg-tri{
+  width: 190px;
+  height: auto;
+  position: absolute;
+  top: 76px;
+  left: -72px;
+  fill: #1E40AF40;
+}
+.ps5-game__bg-circle{
+  width: 435px;
+  height: auto;
+  position: absolute;
+  top: 220px;
+  left: 200px;
+  fill: #1E40AF66;
+}
+.ps5-game__bg-rect{
+  width: 480px;
+  height: auto;
+  position: absolute;
+  top: 170px;
+  left: 220px;
+  fill: #1E40AF66;
+}
+.ps5-game__bg-poly{
+  width: 380px;
+  height: auto;
+  position: absolute;
+  top: 130px;
+  left: 170px;
+  fill: #1E40AF66;
+}
+
+/* 카드 텍스트 */
+.ps5-game__header-desc{
+  font-size: 24px;
+}
+.ps5-game__text{
+  padding: 40px;
+  color: var(--white-100);
+}
+.ps5-game__tag{
+  font-size: 32px;
+  font-weight: 800;
+  padding-bottom: 8px;
+}
+
+
+
+/* ========== section: 게이밍오디오 섹션 ========== */
+#ps5GraphicSec{
+  background: var(--black-600);
+  position: relative;
+  overflow: hidden;
+}
+.ps5-graphic__text{
+  color: var(--white-100);
+  text-align: center;
+}
+.ps5-graphic__desc{
+  padding: 4px 0 40px 0;
+  font-size: 24px;
+}
+.ps5-graphic-card__title,
+.ps5-graphic-card__desc{
+  position: relative;
+  z-index: 3;
+}
+/* 게이밍오디오 배경 */
+.ps5-graphic__bg{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.ps5-graphic__circle{
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top: 800px;
+  left: -100px;
+  fill: var(--blue-500);
+}
+.ps5-graphic__rect{
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 180px;
+  left: 1520px;
+  fill: var(--blue-500);
+}
+.bg__tri img{
+  width: 363px;
+  height: 241px;
+  position: absolute;
+  transform: rotate(32.55deg);
+  top: -60px;
+  left: 30px;
+}
+.bg__x img{
+  position: absolute;
+  top: 950px;
+  left: 1550px;
+}
+
+/* 게이밍오디오 그리드 */
+.ps5-graphic__grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--basic-gap);
+  overflow: hidden;
+}
+.ps5-graphic-card{
+  position: relative;
+  border: 1px solid var(--black-400);
+  border-radius: var(--border-radius-20);
+  color: var(--white-100);
+  aspect-ratio: 1 / 1;
+  padding: 40px;
+  overflow: hidden;
+  align-content: center;
+  background: #121212cc;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  --img-scale: 1;
+}
+.ps5-graphic-card__icon{
+  font-size: 100px;
+}
+.ps5-graphic-card__title{
+  padding: 4px 0 6px 0;
+}
+#ps5GraphicCard01{
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  transform: translateY(120px);
+  transition: .7s;
+  opacity: 0;
+  --img-scale: 1.8;
+}
+#ps5GraphicCard01.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+#ps5GraphicCard02{
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  transform: translateY(-120px);
+  transition: .7s;
+  opacity: 0;
+  --img-scale: 1.4;
+}
+#ps5GraphicCard02.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+#ps5GraphicCard03{
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
+  transform: translateY(-120px);
+  transition: .7s;
+  opacity: 0;
+}
+#ps5GraphicCard03.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+#ps5GraphicCard04{
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
+  transform: translateY(120px);
+  transition: .7s;
+  opacity: 0;
+  --img-scale: 1.5;
+}
+#ps5GraphicCard04.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+#ps5GraphicCard05{
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+  transform: translateY(120px);
+  transition: .7s;
+  opacity: 0;
+  --img-scale: 1.2;
+}
+#ps5GraphicCard05.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+.ps5-graphic-card__img{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;    
+  justify-content: center; 
+}
+.ps5-graphic-card__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  
+  object-position: center;
+  transform: scale(var(--img-scale));
+}
+.ps5-graphic-card::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #12121299;
+  z-index: 2;
+}
+
+
+
+/* ========== section: PS5 액세서리 섹션 ========== */
+#ps5DualSenseSec{
+  background: var(--black-600);
+  color: var(--white-100);
+  text-align: center;
+}
+#ps5DualSenseSec .inner{
+  width: 100%;
+  margin: 0;
+}
+.ps5-dualsense__header-desc{
+  font-size: 24px;
+  padding: 4px 0 40px 0;
+}
+/* 스와이퍼 */
+.ps5-dualsense__swiper{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.ps5-dualsense__swiper::after{
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to left, #121212, #78787800);
+  pointer-events: none;
+}
+/* 이미지 스와이퍼 */
+#videoSwiper{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: var(--white-100);
+}
+#videoSwiper .swiper-slide{
+  width: 100%;
+  height: 100%;
+  display: flex;           
+  align-items: center;        
+  justify-content: center;
+}
+#videoSwiper video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ps5-acc-console__img{
+  width: 100%;
+  height: 100%;
+}
+.ps5-acc-console__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transform: scale(0.8);
+}
+/* 텍스트 스와이퍼 */
+#textSwiper .swiper-wrapper{
+  height: 100%;
+}
+#textSwiper .swiper-slide{
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 100%;
+}
+#textSwiper{
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  height: 820px;
+  pointer-events: none;
+  overflow: visible;
+}
+#textSwiper .text-swiper__content{
+  width: 50%;
+  height: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 40px;
+  color: var(--black-200);
+  background: #1212124D;
+  border-radius: var(--border-radius-20);
+  transition: var(--transition-035);
+  backdrop-filter: blur(10px);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.9);
+}
+
+#textSwiper .swiper-slide-active .text-swiper__content,
+#textSwiper .swiper-slide-prev .text-swiper__content,
+#textSwiper .swiper-slide-next .text-swiper__content {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+#textSwiper .swiper-slide-active .text-swiper__content{
+  width: 56%;
+  height: 269px;
+  color: var(--white-100);
+}
+.text-swiper__title{
+  font-size: 32px;
+}
+#textSwiper .swiper-slide-active .text-swiper__title{
+  font-size: 48px;
+}
+.text-swiper__desc{
+  padding: 8px 0
+}
+#textSwiper .swiper-slide-active .text-swiper__desc{
+  font-size: 24px;
+}
+/* 커스텀 페이지네이션 */
+.ps5-dualsense__btn{
+  position: absolute;
+  right: -168px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  width: 336px;
+  height: 336px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: var(--transition-035);
+  pointer-events: auto; 
+  z-index: 20;
+
+  --after-op: 0.3;
+}
+.ps5-dualsense__btn::before{
+  width: 140%;
+  height: 140%;
+  border-radius: 500%;
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -10;
+}
+.ps5-dualsense__btn::after{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(160px);
+  background: var(--blue-500) url("../../assets/img/pages/ps5/page_tri.svg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+  transition: var(--transition-035);
+
+  opacity: var(--after-op);
+}
+
+.page__btn{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  opacity: 0.3;
+}
+
+.btn-rect{
+  transform: translate(-50%, -50%) translateY(-160px);
+  background-image: url("../../assets/img/pages/ps5/page_rect.svg");
+}
+.btn-circle{
+  transform: translate(-50%, -50%) translateX(-160px);
+  background-image: url("../../assets/img/pages/ps5/page_circle.svg");
+}
+.btn-x{
+  transform: translate(-50%, -50%) translateX(160px);
+  background-image: url("../../assets/img/pages/ps5/page_x.svg");
+}
+
+
+
+/* ========== section: 특수 컨트롤러 섹션 ========== */
+#selectConsoleSec{
+  background: var(--black-600);
+}
+#selectConsoleSec .inner{
+  width: 100%;
+  margin: 0;
+}
+.console__header{
+  text-align: center;
+  color: var(--white-100);
+}
+.console__header-desc{
+  font-size: 24px;
+  padding: 4px 0 40px 0;
+}
+.console__wrap{
+  width: 100%;
+  display: flex;
+}
+.console__card{
+  width: 100%;
+  height: 600px;
+  flex: 1;
+  aspect-ratio: 3/2;
+  position: relative;
+  border: 1px solid var(--black-500);
+  transition: var(--transition-035);
+  overflow: hidden;
+}
+@media (hover: hover) and (pointer: fine){
+  .console__card:hover{
+    flex: 2;
+  }
+}
+.console__card.active{
+  flex: 2;
+}
+/* 콘솔기기 배경 */
+.console__bg{
+  width: 754px;
+  height: 754px;
+  position: absolute;
+  top: 160px;
+  left: 354px;
+  z-index: 0;
+  fill: var(--blue-500);
+  transition: var(--transition-035);
+  transform: scale(1);
+  transform-origin: 60% 60%;
+}
+@media (hover: hover) and (pointer: fine){
+  .console__card:hover .console__bg{
+    transform: scale(3.2);
+  }
+  .console__wrap:hover .console__card:not(:hover) .console__bg{
+    opacity: 0;
+  }
+}
+.console__card.active .console__bg{
+  transform: scale(3.2);
+}
+.console__wrap.is-active .console__card:not(.active) .console__bg{
+  opacity: 0;
+}
+.console__bg02{
+  transform: scale(0);
+  position: absolute;
+  width: 1200px;
+  height: 1200px;
+  top: -80px;
+  left: 800px;
+  fill: var(--blue-400);
+  transition: var(--transition-035);
+}
+@media (hover: hover) and (pointer: fine){
+  .console__card:hover .console__bg02{
+    transform: scale(1);
+    left: 400px;
+  }
+}
+.console__card.active .console__bg02{
+  transform: scale(1);
+  left: 400px;
+}
+
+/* 콘솔기기 내부 텍스트 */
+.console__text{
+  position: relative;
+  color: var(--white-100);
+  padding: 64px;
+  z-index: 3;
+}
+.console__tag{
+  background: var(--blue-500);
+  display: inline-block;
+  padding: 5px 18px;
+  border-radius: 50px;
+  transition: var(--transition-035);
+}
+@media (hover: hover) and (pointer: fine){
+  .console__card:hover .console__tag{
+    background: var(--white-100);
+    color: var(--blue-500);
+  }
+}
+.console__card.active .console__tag{
+  background: var(--white-100);
+  color: var(--blue-500);
+}
+.console__title{
+  padding-top: 8px;
+}
+.console__desc{
+  font-size: 80px;
+  color: #ffffff33;
+  transition: var(--transition-035);
+}
+@media (hover: hover) and (pointer: fine){
+  .console__card:hover .console__desc{
+    color: #ffffff80;
+  }
+}
+.console__card.active .console__desc{
+  color: #ffffff80;
+}
+
+/* 콘솔기기 이미지 */
+.console__img{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
+.console__img img{
+  position: absolute;
+  width: 650px;
+  height: 100%;
+  object-fit: contain;
+  object-position: 50% 85%;
+  transition: var(--transition-035);
+}
+@media (hover: hover) and (pointer: fine){
+ .console__wrap:hover .console__card:not(:hover) .console__img img{
+    transform: scale(0.75);
+    opacity: 0.5;
+  } 
+}
+.console__wrap.is-active .console__card:not(.active) .console__img img{
+  transform: scale(0.75);
+  opacity: 0.5;
+}
+.console__img02 img{
+  width: 500px;
+  transition: var(--transition-035);
+}
+
+
+
+/* ========== Tab Size ========== */
+@media all and (max-width: 1024px){
+  /* === section: 메인 비주얼 === */
+  .mainvisual__content{
+    padding: 165px 0 166px 0;
+  }
+  .mainvisual__img img{
+    width: 580px;
+  }
+
+
+
+  /* === section: 카드 섹션 === */
+  .ps5-game__header-title{
+    font-size: 48px;
+  }
+  .ps5-game__header-desc{
+    font-size: 16px;
+  }
+  .ps5-game__tag{
+    font-size: 20px;
+  }
+  .ps5-game__desc{
+    font-size: 14px;
+  }
+  .ps5-game__text{
+    padding: 20px;
+  }
+
+
+
+  /* === section: 게이밍오디오 섹션 === */
+  .ps5-graphic__title{
+    font-size: 48px;
+  }
+  .ps5-graphic__desc{
+    font-size: 16px;
+  }
+  /* 배경 */
+  .ps5-graphic__circle{
+    width: 600px;
+    top: 750px;
+    left: -100px;
+  }
+  .ps5-graphic__rect{
+    width: 200px;
+    top: 100px;
+    left: 870px;
+  }
+  .bg__tri img{
+    width: 200px;
+    top: -80px;
+    left: -20px;
+  }
+  .bg__x img{
+    width: 250px;
+    top: 950px;
+    left: 800px;
+  }
+  #ps5GameCard03,#ps5GameCard05,#ps5GameCard09{
+    transform: translateX(-285px);
+  }
+  :where(#ps5GameCard03,#ps5GameCard05,#ps5GameCard09).active{
+    transform: translateX(0);
+  }
+  /* 카드 */
+  .ps5-graphic__grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .ps5-graphic-card{
+    aspect-ratio: unset;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 1/1;
+  }
+  .ps5-graphic-card__icon{
+    font-size: 80px;
+    flex-shrink: 0;
+  }
+  .ps5-graphic-card__title{
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .ps5-graphic-card__desc{
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  #ps5GraphicCard01{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+  #ps5GraphicCard02{
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+  }
+  #ps5GraphicCard03{
+    grid-column: 2 / 3;
+    grid-row: 4 / 6;
+  }
+  #ps5GraphicCard04{
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
+  #ps5GraphicCard05{
+    grid-column: 3 / 4;
+    grid-row: 3 / 5;
+  }
+
+
+
+
+  /* === section: PS5 액세서리 섹션 === */
+  .ps5-dualsense__swiper{
+    height: 100vh;
+  }
+
+  .ps5-dualsense__header-title{
+    font-size: 48px;
+  }
+  .ps5-dualsense__header-desc{
+    font-size: 16px;
+  }
+  #textSwiper{
+    height: 500px;
+    /* border: 1px solid red; */
+  }
+  #textSwiper .swiper-slide{
+    margin-bottom: 40px;
+  }
+  #textSwiper .text-swiper__content{
+    width: 48%;
+    padding: 24px 20px;
+  }
+  #textSwiper .swiper-slide-active .text-swiper__content{
+    width: 64%;
+    height: 150px;
+    padding: 32px 20px;
+  }
+  .text-swiper__title{
+    font-size: 20px;
+  }
+  #textSwiper .swiper-slide-active .text-swiper__title{
+    font-size: 24px;
+  }
+  .text-swiper__desc{
+    font-size: 14px;
+  }
+  #textSwiper .swiper-slide-active .text-swiper__desc{
+    font-size: 16px;
+  }
+
+  #textSwiper .ps5-dualsense__btn{
+    width: 200px;
+    height: 200px;
+    right: -100px;
+  }
+  .ps5-dualsense__btn::after{
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, -50%) translateY(100px);
+  }
+  .page__btn{
+    width: 60px;
+    height: 60px;
+  }
+  .btn-rect{
+    transform: translate(-50%, -50%) translateY(-100px);
+  }
+  .btn-circle{
+    transform: translate(-50%, -50%) translateX(-100px);
+  }
+  .btn-x{
+    transform: translate(-50%, -50%) translateX(100px);
+  }
+
+
+
+  /* === section: 특수 컨트롤러 섹션 === */
+  #selectConsoleSec .inner{
+    width: 100%;
+  }
+  .console__header-title{
+    font-size: 48px;
+  }
+  .console__header-desc{
+    font-size: 16px;
+  }
+  .console__card{
+    height: 320px;
+  }
+  .console__bg{
+    width: 500px;
+    height: 500px;
+    top: 80px;
+    left: 200px;
+  }
+  .console__bg02{
+    width: 550px;
+    height: 550px;
+    top: -30px;
+  }
+  @media (hover: hover) and (pointer: fine){
+    .console__card:hover .console__bg02{
+      transform: scale(1);
+      left: 300px;
+    }
+  }
+  .console__card.active .console__bg02{
+    transform: scale(1);
+    left: 300px;
+  }
+  .console__text{
+    padding: 32px;
+  }
+  .console__tag{
+    font-size: 16px;
+  }
+  .console__title{
+    font-size: 24px;
+  }
+  .console__desc{
+    font-size: 32px;
+  }
+  .console__img img{
+    width: 320px;
+  }
+  .console__img02 img{
+    width: 280px;
+    top: 10px;
+  }
+}
+
+@media all and (max-width: 768px){
+  /* === section: 메인 비주얼 === */
+  .mainvisual__img img{
+    width: 100%;
+  }
+  .mainvisual__content{
+    padding: 100px 0;
+  }
+  .mainvisual__title{
+    font-size: 32px;
+  }
+  .mainvisual__desc{
+    font-size: 14px;
+    padding: 4px 0 24px 0;
+  }
+
+
+
+  /* === section: 카드 섹션 === */
+  .ps5-game__header-title{
+    text-align: center;
+    font-size: 32px;
+  }
+  .ps5-game__header-desc{
+    text-align: center;
+    font-size: 14px;
+  }
+  .ps5-game{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "c1 c1"
+      "c2 c3"
+      "c4 c5"
+      "c8 c9";
+  }
+  .ps5-game__card{
+    border-radius: var(--border-radius-16);
+  }
+  #ps5GameCard01{
+    aspect-ratio: auto;
+    padding: 8px 0 12px;
+  }
+  #ps5GameCard01 .ps5-game__content{
+    height: auto;
+    text-align: left;
+  }
+  #ps5GameCard02,
+  #ps5GameCard03,
+  #ps5GameCard04,
+  #ps5GameCard05,
+  #ps5GameCard08,
+  #ps5GameCard09{
+    aspect-ratio: 1 / 1;
+  }
+  #ps5GameCard03,#ps5GameCard05,#ps5GameCard09{
+    transform: translateX(-50px);
+  }
+  :where(#ps5GameCard03,#ps5GameCard05,#ps5GameCard09).active{
+    transform: translateX(0);
+  }
+  .ps5-game__content video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .ps5-game__text{
+    padding: 16px;
+  }
+  .ps5-game__tag{
+    font-size: 16px;
+  }
+  .ps5-game__desc{
+    display: none;
+  }
+
+  /* 배경이미지 */
+  .ps5-game__img{
+    top: 90px;
+    left: 40px;
+  }
+  .ps5-game__img img{
+    width: 50px;
+  }
+  .ps5-game__bg-circle{
+    width: 143px;
+    top: 45%;
+    left: 35%;
+  }
+  .ps5-game__bg-tri{
+    width: 57px;
+    top: 8%;
+    left: -10%;
+  }
+  .ps5-game__bg-rect{
+    width: 260px;
+    top: 42%;
+    left: 30%;
+  }
+  .ps5-game__bg-poly{
+    width: 126px;
+    top: 30%;
+    left: 28%;
+  }
+
+
+
+  /* === section: 게이밍오디오 섹션 === */
+  #ps5GraphicSec .inner{
+    width: 90%;
+  }
+  .ps5-graphic__title{
+    font-size: 32px;
+  }
+  .ps5-graphic__desc{
+    font-size: 14px;
+  }
+  #ps5GraphicCard01,#ps5GraphicCard02{
+    transform: translateY(90px);
+  }
+  :where(#ps5GraphicCard01,#ps5GraphicCard02).active{
+    transform: translateY(0);
+  }
+  #ps5GraphicCard03,#ps5GraphicCard04,#ps5GraphicCard05{
+    transform: translateY(-90px);
+  }
+  :where(#ps5GraphicCard01,#ps5GraphicCard02).active{
+    transform: translateY(0);
+  }
+  /* 배경 */
+  .ps5-graphic__circle{
+    width: 300px;
+    top: 400px;
+    left: -120px;
+  }
+  .ps5-graphic__rect{
+    width: 100px;
+    top: 5px;
+    left: 300px;
+  }
+  .bg__tri img{
+    width: 100px;
+    top: -90px;
+    left: -10px;
+  }
+  .bg__x img{
+    width: 150px;
+    top: 720px;
+    left: 280px;
+  }
+
+  /* 카드 */
+  .ps5-graphic__grid{
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .ps5-graphic-card{
+    padding: 12px;
+  }
+  .ps5-graphic-card__icon{
+    font-size: 50px;
+  }
+  .ps5-graphic-card__title{
+    font-size: 16px;
+  }
+  .ps5-graphic-card__desc{
+    display: none;
+  }
+  #ps5GraphicCard01{
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+  #ps5GraphicCard02{
+    grid-column: 1 / 2;
+    grid-row: 4 / 6;
+  }
+  #ps5GraphicCard03{
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+  #ps5GraphicCard04{
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+  }
+  #ps5GraphicCard05{
+    grid-column: 2 / 3;
+    grid-row: 5 / 7;
+  }
+
+
+
+  /* === section: PS5 액세서리 섹션 === */
+  #ps5DualSenseSec{
+    position: relative;
+    overflow: visible;
+    padding-bottom: 0px;
+  }
+  .ps5-dualsense__header-title{
+    font-size: 32px;
+  }
+  .ps5-dualsense__header-desc{
+    font-size: 14px;
+  }
+  .ps5-dualsense__swiper{
+    height: auto;
+    overflow: visible;
+    display: block;
+  }
+  .ps5-dualsense__swiper::after{
+    background: none;
+  }
+  #videoSwiper{
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 205px;
+  }
+  #textSwiper{
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    height: 126px;
+    margin-top: 16px;
+    padding: 0 16px;
+    overflow: hidden;
+    pointer-events: auto;
+  }
+  #textSwiper .swiper-slide{
+    height: auto;
+    width: 100%;
+    margin: 0 0 12px 0;   
+    display: block;
+  }
+  #textSwiper .text-swiper__content{
+    width: 100%;
+    height: 126px;
+    padding: 20px;
+    opacity: 1;         
+    visibility: visible;
+    transform: none;
+    background: #121212cc;
+    color: var(--white-100);
+    border: 1px solid var(--black-400);
+  }
+  #textSwiper .swiper-slide-active .text-swiper__content{
+    width: 100%;
+    height: 126px;
+    padding: 20px;
+  }
+  #textSwiper .swiper-slide{
+    height: auto !important;
+    margin: 0 0 12px 0 !important;
+  }
+  .text-swiper__title{
+    font-size: 16px;
+  }
+  #textSwiper .swiper-slide-active .text-swiper__title{
+    font-size: 16px;
+  }
+  .text-swiper__desc{
+    font-size: 12px;
+  }
+  #textSwiper .swiper-slide-active .text-swiper__desc{
+    font-size: 12px;
+  }
+  .ps5-dualsense__btn{
+    display: none;
+  }
+.dualSense-pin-spacer{
+    background: var(--black-600);
+  }
+
+
+  
+  /* === section: 특수 컨트롤러 섹션 === */
+  .console__text{
+    padding: 18px;
+  }
+  .console__header-title{
+    font-size: 32px;
+  }
+  .console__header-desc{
+    font-size: 14px;
+  }
+  .console__wrap{
+    display: block;
+  }
+  .console__card{
+    height: 170px;
+  }
+  .console__bg{
+    width: 300px;
+    height: 300px;
+    top: -15px;
+    left: 160px;
+  }
+  @media (hover: hover) and (pointer: fine){
+    .console__card:hover .console__bg02{
+      transform: scale(1);
+      left: 146px;
+      top: -100px;
+    }
+  }
+  .console__card.active .console__bg02{
+    transform: scale(1);
+    left: 146px;
+    top: -100px;
+  }
+  .console__tag{
+    padding: 4px 8px;
+    font-size: 16px;
+  }
+  .console__title{
+    padding-top: 4px;
+    font-size: 20px;
+  }
+  .console__desc{
+    font-size: 24px;
+  }
+  .console__img img{
+    width: 180px;
+  }
+  .console__img02 img{
+    width: 160px;
+    object-position: 50% 70%;
+  }
+}
+
+  /* br태그 */
+  .br-pc{ display:block; }
+  .br-t{ display:none; }
+  .br-m{ display:none; }
+  
+@media (max-width:1024px){
+  .br-pc{ display:none; }
+  .br-t{ display:block; }
+  .br-m{ display:none; }
+}
+  
+@media (max-width:768px){
+  .br-pc{ display:none; }
+  .br-t{ display:none; }
+  .br-m{ display:block; }
+}

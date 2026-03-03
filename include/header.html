@@ -1,0 +1,84 @@
+<!-- 기본 고정 헤더: 투명일 때 transparent 클래스명 추가 -->
+<div class="header__basic">
+  <div class="inner">
+    <a href="index.html" class="header__logo">
+      <i class="bi bi-playstation"></i>
+    </a>
+
+    <nav class="gnb">
+      <ul>
+        <li class="gnb__li gnb--ps5 title--l"><a href="#none">PS5</a></li>
+        <li class="gnb__li gnb--store title--l"><a href="store.html" target="_blank">게임 스토어</a></li>
+        <li class="gnb__li gnb--news title--l"><a href="news.html" target="_blank">이달의 PS</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__action">
+      <button class="btn" id="headerSearchBtn"><i class="bi bi-search icon--large"></i></button>
+      <button class="btn" id="headerLoginBtn"><i class="bi bi-person-fill icon--large"></i></button>
+      <button class="btn" id="headerXBtn"><i class="bi bi-x-lg icon--large"></i></button>
+      <button class="btn" id="hamBtn"><i class="bi bi-list icon--large"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- PC 버전 lnb -->
+<div class="header__lnb">
+  <div class="inner">
+    <nav class="lnb">
+      <ul>
+        <li class="lnb__li"><a href="ps5.html" target="_blank">PlayStation 5</a></li>
+        <li class="lnb__li"><a href="ps5-pro.html" target="_blank">PlayStation 5 Pro</a></li>
+        <li class="lnb__li"><a href="accessories.html" target="_blank">액세서리</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- 검색 영역 -->
+<div class="header__search-wrap">
+  <div class="search-wrap-bg">
+    <div class="bg-diagram--rect"></div>
+    <div class="bg-diagram--circle"></div>
+    <svg class="bg-diagram--tri" xmlns="http://www.w3.org/2000/svg" width="190" height="151" viewBox="0 0 190 151" fill="none">
+      <path d="M185 146H5L95 5L185 146Z" stroke="#2563EB" stroke-opacity="0.2" stroke-width="10" stroke-linejoin="round"/>
+    </svg>
+
+    <div class="search-wrap">
+      <form class="search-wrap__form">
+        <input type="search" id="headerSearchInput" placeholder="Search">
+        <i class="bi bi-search"></i>
+      </form>
+      <div class="search-wrap__result">
+        <!-- <div class="search-result">
+          <img src="" alt="">
+          <div class="result__info">
+            <span class="result__tag">액션</span>
+            <div class="result__name">Monster Hunter Wilds</div>
+          </div>
+        </div>
+        <div class="search-result">
+          <img src="" alt="">
+          <div class="result__info">
+            <span class="result__tag">액션</span>
+            <div class="result__name">붉은 사막</div>
+          </div>
+        </div>
+        <div class="search-result">
+          <img src="" alt="">
+          <div class="result__info">
+            <span class="result__tag">액션</span>
+            <div class="result__name">붉은 사막</div>
+          </div>
+        </div> -->
+      </div>
+      <div class="search-wrap__tag-wrap">
+        <span class="search-wrap__tag" data-tag="action">#액션</span>
+        <span class="search-wrap__tag" data-tag="story">#스토리</span>
+        <span class="search-wrap__tag" data-tag="shoot">#슈팅</span>
+        <span class="search-wrap__tag" data-tag="openworld">#오픈월드</span>
+        <span class="search-wrap__tag" data-tag="adventure">#어드벤쳐</span>
+      </div>
+    </div>
+  </div>
+</div>

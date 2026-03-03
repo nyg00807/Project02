@@ -1,0 +1,1023 @@
+/* ========== section: 메인비주얼 ========== */
+#newsSec{
+  padding: 0;
+}
+#newsSec .inner{
+  width: 100%;
+  margin: 0;
+}
+.newsmainvisual{
+  position: relative;
+}
+.mainvisual__backImg{
+  width: 100%;
+  height: 570px;
+  overflow: hidden;
+}
+.mainvisual__backImg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+.mainvisual__content{
+  position: absolute;
+  text-align: center;
+  color: var(--white-100);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-40%);
+}
+.mainvisual__title{
+  margin-bottom: 32px;
+}
+
+
+
+/* ========== section: 영상 뉴스 섹션 ========== */
+.videoNews__card{
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 24px;
+  align-items: center;
+  border-radius: 18px;
+  margin-bottom: 96px;
+}
+.videoNews__card iframe{
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  height: auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.videoNews__tag{
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 50px;
+  color: var(--white-100);
+}
+.videoNews__card:nth-child(2) iframe{
+  order: 2;
+}
+.videoNews__card:nth-child(2) .videoNews__text{
+  order: 1;
+}
+.videoNews__card:nth-child(4){
+  grid-template-columns: 1fr;
+  text-align: center;
+  justify-items: center;
+  gap: 24px;
+  margin-bottom: 0;
+}
+.videoNews__card:nth-child(4) iframe{
+  width: auto;
+  height: 798px;
+}
+.videoNews__card:nth-child(4) .page-button{
+  justify-content: center;
+}
+.newstag01{
+  background: var(--red-400);
+}
+.newstag02{
+  background: var(--purple-500);
+}
+.newstag03{
+  background: var(--cyan-400);
+}
+.newstag04{
+  background: var(--yellow-400);
+  color: var(--black-600);
+}
+.videoNews__title{
+  margin: 12px 0;
+}
+.videoNews__desc{
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+.page-button-left{
+  float: left;
+}
+.btn--medium{
+  min-width: 128px;
+	height: 56px;
+	font-size: 24px;
+	padding: 0 60px;
+	gap: 6px;
+}
+/* ========== section: 최신 월간 게임 섹션 ========== */
+.monthGame__header-desc {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: var(--blue-500);
+}
+#monthGameSwiper .swiper-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 24px;
+}
+#monthGameSwiper .swiper-slide {
+  position: relative;
+  border-radius: var(--border-radius-24);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+}
+#monthGameSwiper .swiper-slide::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #12121200 0%, #12121280 75%, #121212BF 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+@media (hover: hover) and (pointer: fine){
+  #monthGameSwiper .swiper-slide:hover .monthGame__img img {
+    transform: scale(1.1);
+  }
+}
+.monthGame__img {
+  width: 100%;
+  height: 100%;
+}
+.monthGame__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: var(--transition-035);
+}
+.monthGame__text-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 32px 40px;
+  color: var(--white-100);
+}
+.monthGame__game-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  padding: 24px;
+  color: var(--white-100);
+}
+.monthGame__main-text .monthGame__game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.monthGame__main-text .monthGame__game-title {
+  margin-bottom: 0;
+}
+.monthGame__main-text .monthGame__title {
+  color: var(--white-100);
+}
+.monthGame__main-text .monthGame__star i {
+  font-size: 24px;
+}
+.monthGame__main-text .discount__tag {
+  font-size: 16px;
+}
+.monthGame__game-title {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  white-space: nowrap;
+  margin-bottom: 6px;
+}
+.monthGame__star {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--yellow-400);
+}
+.monthGame__star i {
+  font-size: 16px;
+}
+.monthGame__discount {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.discount__cost {
+  color: var(--black-300);
+}
+.discount__tag {
+  background: var(--blue-500);
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-weight: 800;
+  font-size: 14px;
+}
+#monthGameSwiper .swiper-slide:first-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+#monthGameSwiper .swiper-slide:first-child .monthGame__img {
+  height: 100%;
+  aspect-ratio: 4/3;
+}
+.swiper-pagination{
+  display: none;
+}
+
+
+/* ========== section: 에디터 초이스 섹션 ========== */
+.choice__header-desc{
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: var(--blue-500);
+}
+.choice__grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.choice__card{
+  position: relative;
+  border-radius: var(--border-radius-24);
+  overflow: hidden;
+  aspect-ratio: 5 / 2;
+  cursor: pointer;
+}
+.choice__media{
+  position: absolute;
+  inset: 0;
+}
+.choice__img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.choice__img--gray{
+  filter: grayscale(1);
+}
+.choice__img--color{
+  filter: grayscale(0);
+  clip-path: inset(0 100% 0 0);
+  transition: var(--transition-035)
+}
+@media (hover: hover) and (pointer: fine){
+  .choice__card:hover .choice__img--color {
+    clip-path: inset(0 0 0 0);
+  } 
+}
+.choice__card.active .choice__img--color{
+  clip-path: inset(0 0 0 0);
+} 
+.choice__card::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #12121280 0%, #12121240 50%, #12121200 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.choice__text{
+  position: absolute;
+  inset: 0;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  z-index: 2;
+  color: var(--white-100);
+}
+.choice__tag{
+  padding: 4px 6px;
+  border-radius: 6px;
+  background: var(--blue-500);
+}
+.choice__content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--transition-035);
+}
+@media (hover: hover) and (pointer: fine){
+  .choice__card:hover .choice__content{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.choice__card.active .choice__content{
+  opacity: 1;
+  transform: translateY(0);
+}
+.choice__content i {
+  font-size: 24px;
+  color: var(--white-100)
+}
+
+
+
+/* ========== section: 블로그 최신 뉴스 섹션 ========== */
+.recentNews__header-desc{
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: var(--blue-500);
+}
+.recentNews__wrap{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.recentNews__card{
+  height: 517px;
+  border-radius: var(--border-radius-24);
+  perspective: 1200px;
+  cursor: pointer;
+}
+.recentNews__card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-24);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform .6s ease;
+}
+.recentNews__card.is-open .recentNews__card-inner{
+  transform: rotateY(180deg);
+}
+.recentNews__card-front,
+.recentNews__card-back{
+  position: absolute;
+  inset: 0;
+  border-radius: var(--border-radius-24);
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+.recentNews__card-front {
+  z-index: 2;
+  transform: rotateY(0deg); 
+}
+.recentNews__card-back {
+  z-index: 1;
+  transform: rotateY(180deg); 
+}
+.recentNews__card.is-open .recentNews__card-front{
+  z-index: 1; 
+}
+.recentNews__card.is-open .recentNews__card-back{
+  z-index: 2; 
+}
+.recentNews__card-front{ 
+  transform: rotateY(0deg) translateZ(1px); 
+}
+.recentNews__card-back{  
+  transform: rotateY(180deg) translateZ(1px); 
+}
+.recentNews__card .card__img{
+  width: 100%;
+  height: 100%;
+}
+.recentNews__card .card__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* 앞면 */
+.front__card-text{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--blue-500);
+}
+.front__card-desc{
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+.card__date{
+  position: relative;
+  padding-left: 24px; 
+  color: var(--black-400);
+}
+.card__date::before{
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 16px;
+  background: var(--black-400);
+}
+
+/* 뒷면 */
+.recentNews__card-back::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #12121280;
+  z-index: 1;
+}
+.back__card-text{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white-100);
+  z-index: 2;
+  margin: 0 36px;
+}
+.back__card-desc{
+  margin: 24px 0;
+}
+.back__card-button{
+  display: flex;
+}
+.back__card-button .btn--large{
+  min-width: 80px;
+	height: 40px;
+	font-size: 16px;
+	padding: 0 30px;
+	gap: 6px;
+}
+.all-news__btn{
+  margin-top: 64px;
+  margin-bottom: 132px;
+}
+/* 반사효과 */
+.recentNews__card-front::before{
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -70%;
+  width: 55%;
+  height: 180%;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,.55) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: skewX(-20deg) translateX(-30%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+@media (hover: hover) and (pointer: fine){
+  .recentNews__card:hover .recentNews__card-front::before{
+    opacity: 1;
+    animation: glass-sweep .9s ease forwards;
+  }
+}
+@keyframes glass-sweep{
+  0%   { transform: skewX(-20deg) translateX(-30%); }
+  100% { transform: skewX(-20deg) translateX(320%); }
+}
+
+
+
+@media all and (max-width: 1780px){
+  /* ========== section: 영상 뉴스 섹션 ========== */
+  .videoNews__title{
+    font-size: 36px;
+    margin: 8px 0;
+  }
+  .videoNews__desc{
+    margin-bottom: 24px;
+  }
+  .videoNews__card:nth-child(4) iframe{
+    width: 100%;
+  }
+
+
+
+  /* ========== section: 최신 월간 게임 섹션 ========== */
+  #monthGameSwiper .swiper-wrapper{
+    gap: 20px;
+  }
+  .monthGame__text-wrap{
+    padding: 20px;
+  }
+  .monthGame__main-text .monthGame__game-header{
+    display: block;
+  }
+  .monthGame__main-text .monthGame__discount{
+    margin: 6px 0;
+  }
+  .monthGame__main-text .monthGame__star{
+    gap: 6px;
+  }
+  .monthGame__main-text .monthGame__star i{
+    font-size: 20px;
+  }
+
+
+  /* ========== section: 블로그 최신 뉴스 섹션 ========== */
+  .recentNews__card{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+}
+@media all and (max-width: 1024px){
+  /* ========== section: 메인비주얼 ========== */
+  .mainvisual__backImg{
+    height: 450px;
+  }
+  .mainvisual__title{
+    white-space: nowrap;
+    margin-bottom: 20px;
+  }
+  .mainvisual__desc{
+    white-space: nowrap;
+  }
+
+
+  /* ========== section: 영상 뉴스 섹션 ========== */
+  .videoNews__card{
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 72px;
+  }
+  .videoNews__card iframe{
+    height: 256px;
+  }
+  .videoNews__card:nth-child(2) iframe,
+  .videoNews__card:nth-child(2) .videoNews__text{
+    order: initial;
+  }
+  .videoNews__text{
+    min-width: 0;
+  }
+  .videoNews__card:nth-child(4){
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    gap: 24px;
+  }
+  .videoNews__card:nth-child(4) iframe{
+    width: 100%;
+    height: 542px;
+    max-width: none;
+  }
+  .videoNews__card:nth-child(4) .page-button{
+    justify-content: center;
+  }
+  .videoNews__tag{
+    font-size: 14px;
+  }
+  .videoNews__title{
+    margin: 6px 0 12px 0;
+    font-size: 24px;
+  }
+  .videoNews__desc{
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  #videoNewsSec .page-button-left{
+  float: unset;
+  width: auto;
+  margin: 0;
+  }
+  #videoNewsSec .btn--medium{
+  min-width: 80px;
+	height: 40px;
+	font-size: 16px;
+	padding: 0 30px;
+	gap: 6px;
+  }
+  /* ========== section: 최신 월간 게임 섹션 ========== */
+  #monthGameSec{
+    position: relative;
+  }
+  .monthGame__header-text{
+    text-align: center;
+  }
+  #monthGameSwiper .swiper-wrapper{
+    display: flex;     
+    grid-template-columns: unset;
+    grid-auto-rows: unset;
+    gap: 0;     
+    align-items: stretch;
+  }
+  #monthGameSwiper .swiper-slide:first-child{
+    grid-column: unset;
+    grid-row: unset;
+  }
+  #monthGameSwiper .swiper-slide{
+    width: var(--column-3);
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+  }
+  .monthGame__main-text .monthGame__game-title{
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    margin-bottom: 6px;
+  }
+  .monthGame__desc{
+    display: none;
+  }
+  .monthGame__text-wrap{
+    padding: 24px;
+  }
+  .monthGame__main-text .monthGame__game-header{
+    display: block;
+    margin-bottom:0;
+  }
+  .monthGame__main-text .monthGame__title {
+    color: var(--white-100);
+    font-size: 20px;
+  }
+  .monthGame__main-text .discount__price{
+    font-size: 20px;
+  }
+  .monthGame__main-text .discount__cost{
+    font-size: 14px;
+  }
+  .monthGame__main-text .main__star{
+    font-size: 16px;
+  }
+  .monthGame__main-text .monthGame__star i{
+    font-size: 16px;
+  }
+  .monthGame__main-text .discount__tag{
+    padding: 4px 6px;
+    font-size: 14px;
+  }
+  #monthGameSwiper{
+    overflow: hidden; 
+  }
+  #monthGameSec .swiper-pagination{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 80px;
+  }
+  #monthGameSec .swiper-pagination-bullet{
+    width: 48px;
+    height: 6px;
+    background: var(--blue-200);
+    opacity: 1;
+    border-radius: 0;
+  }
+  #monthGameSec .swiper-pagination-bullet-active{
+    background: var(--blue-500);
+  }
+
+  /* ========== section: 에디터 초이스 섹션 ========== */
+  .choice__header-text{
+    text-align: center;
+  }
+  .choice__grid{
+    grid-template-columns: 1fr;
+  }
+  .choice__card{
+    width: 100%;
+    aspect-ratio: 4/1;
+  }
+  .choice__text{
+    padding: 36px;
+  }
+
+
+
+  /* ========== section: 블로그 최신 뉴스 섹션 ========== */
+  .recentNews__header-text{
+    text-align: center;
+  }
+  .recentNews__wrap{
+    grid-template-columns: 1fr;
+  }
+  .recentNews__card{
+    height: 226px;
+  }
+  .recentNews__card-front{
+    display: block;
+  }
+  .recentNews__card-front .card__img{
+    width: 100%;
+    height: 100%;
+  }
+  .recentNews__card-front .card__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .front__card-text{
+    position: absolute;
+    top: 0;
+    right: 0;  
+    bottom: 0;
+    left: auto;
+    width: 38%; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.75);
+    color: var(--blue-500);
+  }
+  .front__card-desc{
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    margin-top: 12px;
+  }
+  .recentNews__card-front::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: linear-gradient(to right, rgba(18,18,18,0) 0%, rgba(18,18,18,0.35) 70%, rgba(18,18,18,0.55) 100%);
+    pointer-events:none;
+    z-index: 1;
+  }
+  .front__card-text{
+    z-index: 2;
+  }
+  .front__card-title{
+    font-size: 16px;
+  }
+  .front__card-desc{
+    font-size: 14px;
+  }
+  .card__date::before{
+    left: 12px;
+  }
+  .back__card-text{
+    padding: 32px;
+    margin: 0;
+  }
+  .back__card-title{
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width: 768px){
+  /* ========== section: 메인비주얼 ========== */
+  .mainvisual__backImg{
+    height: 260px;
+  }
+  .mainvisual__title{
+    font-size: 32px;
+  }
+  .mainvisual__desc{
+    font-size: 14px;
+    white-space: wrap;
+  }
+
+  .videoNews__card{
+    display: block;
+    margin-bottom: 40px;
+  }
+
+
+
+  /* ========== section: 영상 뉴스 섹션 ========== */
+  .videoNews__card iframe{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 3;
+    border-radius: 16px;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 14px; 
+  }
+  .videoNews__text{
+    padding: 0 4px; 
+  }
+  .videoNews__tag{
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 4px;
+  }
+  .videoNews__title{
+    font-size: 18px;
+    margin: 0 0 12px 0;
+  }
+  .videoNews__desc{
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  #videoNewsSec .page-button-left{
+  width: 100%;
+  }
+  #videoNewsSec .btn--medium{
+    display: block;      
+    width: 100%;
+    min-width: 0;  
+  }
+  #videoNewsSec .page-button-center{
+    width: 100%;
+  }
+  .videoNews__card:nth-child(4){
+    text-align: left;
+    justify-items: initial;
+    margin-bottom: 0;
+  }
+  .videoNews__card:nth-child(4) iframe{
+    width: 100%;
+    height: auto;
+  }
+
+  /* ========== section: 최신 월간 게임 섹션 ========== */
+  .monthGame__header-title{
+    font-size: 32px;
+  }
+  .monthGame__header-desc{
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  #monthGameSwiper .swiper-slide{
+    aspect-ratio: 1/1;
+  }
+  .monthGame__title{
+    font-size: 16px;
+  }
+  .monthGame__main-text .monthGame__title {
+    font-size: 16px;
+  }
+  .discount__price{
+    font-size: 16px;
+  }
+  .monthGame__main-text .discount__price{
+    font-size: 16px;
+  }
+  .discount__cost{
+    font-size: 12px;
+  }
+  .monthGame__main-text .discount__cost{
+    font-size: 12px;
+  }
+  .monthGame__main-text .main__star{
+    font-size: 16px;
+  }
+  .monthGame__main-text .monthGame__star i{
+    font-size: 16px;
+  }
+  .monthGame__main-text .discount__tag{
+    padding: 4px 6px;
+    font-size: 14px;
+  }
+  #monthGameSec .swiper-pagination{
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+  }
+
+
+  
+  /* ========== section: 에디터 초이스 섹션 ========== */
+  .choice__header-title{
+    font-size: 32px;
+  }
+  .choice__header-desc{
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  .choice__grid{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .choice__card{
+    aspect-ratio: 3 / 1;
+    border-radius: var(--border-radius-16);
+  }
+  .choice__text{
+    padding: 20px;
+    gap: 4px;
+  }
+  .choice__tag{
+    font-size: 10px;
+  }
+  .choice__title{
+    font-size: 18px;
+  }
+  .choice__desc{
+    font-size: 12px;
+  }
+  .choice__content i{
+    font-size: 12px;
+  }
+
+
+
+  /* ========== section: 블로그 최신 뉴스 섹션 ========== */
+  .recentNews__header-title{
+    text-align: center;
+    font-size: 32px;
+  }
+  .recentNews__header-desc{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  .recentNews__wrap{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .recentNews__card{
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+  .recentNews__card-front{
+    display: block;
+  }
+  .recentNews__card-front .card__img{
+    width: 100%;
+    height: 100%;
+  }
+  .recentNews__card-front .card__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .front__card-text{
+    width: auto;      
+    top: auto;      
+    right: auto;
+    left: 0;
+    bottom: 0;
+  }
+  .front__card-text{
+    position: absolute;
+    inset: auto 0 0 0; 
+    padding: 16px;
+    background: rgba(255,255,255,0.75);
+    color: var(--blue-500);
+    z-index: 2;
+  }
+  .back__card-desc{
+    margin: 16px 0;
+  }
+  .recentNews__card-front::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: linear-gradient(
+      to bottom,
+      rgba(18,18,18,0) 0%,
+      rgba(18,18,18,0.35) 70%,
+      rgba(18,18,18,0.55) 100%
+    );
+    pointer-events:none;
+    z-index: 1;
+  }
+  .front__card-title{
+    font-size: 14px;
+  }
+  .front__card-desc{
+    margin-top: 12px;
+    /* gap: 6px; */
+  }
+  .card__name{
+    font-size: 12px;
+  }
+  .card__date{
+    font-size: 12px;
+    padding-left: 24px;
+  }
+  .card__date::before{
+    left: 12px;
+  }
+  .all-news__btn .page-button-center{
+    display: block;
+    width: 100%;
+  }
+  .all-news__btn .btn--large{
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+

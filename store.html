@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/icon/playstation.ico">
+  <title>PlayStation 게임 스토어</title>
+  <link rel="stylesheet" href="css/common/import.css">
+  <link rel="stylesheet" href="css/pages/store.css">
+</head>
+<body id="storeBody">
+  <div class="body__inner">
+    <!-- header include -->
+    <header class="header" id="header"></header>
+
+    <div class="overlay" id="overlay"></div>
+    
+    <main class="main">
+      <section class="section" id="mainVisualSec">
+        <div class="inner">
+          <div class="visual__text">
+            <h1>게임 스토어</h1>
+            <p class="title--s">
+              최신 게임부터 인기 타이틀까지, 모든 게임을 한곳에서!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="section" id="mainStore">
+        <div class="inner">
+          <div class="tab__filter__btn">
+            <div class="page-button">
+              <div class="page-button-right">
+                <button class="btn btn--medium btn--solid-blue">
+                  <i class="bi bi-search"></i>
+                  <span>검색</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="filter__box">
+            <div class="tab__text">
+              <p class="title--l">검색 필터</p>
+              <div class="x__btn">
+                <i class="bi bi-x-lg"></i>
+              </div>
+            </div>
+            <div class="game__search tab">
+              <input type="search" class="input-field--medium" placeholder="게임을 검색하세요.">
+            </div>
+            <div class="filter__box__main">
+              <div class="filter__wrap">
+                <div class="filter__title genre__title active">
+                  <p class="title--m">장르</p>
+                  <i class="bi bi-caret-down-fill"></i>
+                </div>
+                <ul class="accordion genre__accordion active">
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">공포</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">사이버펑크</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">소울라이크</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">슈팅</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">스토리</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">시네마틱</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">액션</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">어드벤처</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">오픈월드</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">판타지</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">퍼즐</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">협동</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">SF</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">RPG</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter__wrap">
+                <div class="filter__title star__title">
+                  <p class="title--m">별점순</p>
+                  <i class="bi bi-caret-down-fill"></i>
+                </div>
+                <ul class="accordion star__accordion">
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">5점</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">4점대</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">3점대</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">2점대</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">1점대</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter__wrap">
+                <div class="filter__title price__title">
+                  <p class="title--m">가격</p>
+                  <i class="bi bi-caret-down-fill"></i>
+                </div>
+                <ul class="accordion price__accordion">
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">₩30,000 이하</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">₩40,000 이하</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">₩50,000 이하</p>
+                  </li>
+                  <li>
+                    <div class="accordion__chk"></div>
+                    <p class="text--m">₩50,000 이상</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="page-button">
+              <div class="page-button-center">
+                <button class="btn btn--medium btn--solid-purple">
+                  <span>닫기</span>
+                </button>
+                <button class="btn btn--large btn--solid-blue">
+                  <span>필터 초기화</span>
+                  <i class="bi bi-arrow-repeat"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="game__wrap">
+            <div class="game__search">
+              <input type="search" class="input-field--medium" placeholder="게임을 검색하세요.">
+            </div>
+            <div class="game__cards">
+              <!-- <div class="card">
+                <div class="card__discount">
+                  <p class="title--l">-5%</p>
+                </div>
+                <div class="card__img">
+                  <img src="assets/img/games/astroBot/cover.jpg" alt="">
+                </div>
+                <div class="card__text">
+                  <div class="card__text__top">
+                    <div class="text__name">
+                      <p class="title--s">
+                        아스트로봇
+                      </p>
+                    </div>
+                    <div class="text__star">
+                      <p class="title--s">
+                        <i class="bi bi-star-fill"></i>4.9
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card__text__mid">
+                    <div class="text__dev">
+                      <p class="text--s">
+                        Sony Interactive Entertainment
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card__text__bottom">
+                    <div class="text__price">
+                      <p class="title--l">&#8361 69,800</p>
+                    </div>
+                    <div class="text__price__discount">
+                      <p class="text--s">
+                        &#8361 69,800
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            <div id="pagination" class="pagination"></div>
+          </div>
+          <div class="wishlist__wrap">
+            <div class="wishlist">
+              <i class="bi bi-heart-fill"></i>
+              <p class="title--xs">위시리스트</p>
+            </div>
+            <div class="wishlist__panel">
+              <div class="wishlist__top">
+                <div class="wishlist__title">
+                  <i class="bi bi-heart-fill"></i>
+                  <p class="title--l">
+                    위시리스트
+                  </p>
+                </div>
+                <div class="wishlist__x">
+                  <i class="bi bi-x-lg"></i>
+                </div>
+              </div>
+              <div class="wishlist__count">총 0개</div>
+              <ul class="wishlist__list">
+              </ul>
+              <div class="wishlist__all__delete">
+                <p class="title--xs">전체 삭제</p>
+                <i class="bi bi-trash-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--         <div class="card__hover">
+          <div class="card__hover__video">
+            <video src=""></video>
+          </div>
+          <div class="card__hover__mid">
+            <div class="hover__mid__left">
+              <div class="mid__left__name">
+                <p class="title--s">qweqweqweqw</p>
+              </div>
+              <div class="mid__left__bottom">
+                <div class="bottom__dev">
+                  <p class="text--m">qweqweqwe</p>
+                </div>
+                <div class="bottom__star">
+                  <p class="title--xs">4.2</p>
+                </div>
+              </div>
+            </div>
+            <div class="hover__mid__discount">
+              <p class="title--l">-20%</p>
+            </div>
+            <div class="hover__mid__right">
+              <div class="right__discount__price">
+                <p class="text--m">123455</p>
+              </div>
+              <div class="right__price">
+                <p class="title--l">12353</p>
+              </div>
+            </div>
+          </div>
+          <div class="card__hover__bottom">
+            <div class="bottom__genre__box">
+              <div class="genre">
+                <p class="title--xs">액션</p>
+              </div>
+              <div class="genre">
+                <p class="title--xs">호러</p>
+              </div>
+            </div>
+            <div class="hover__wishlist">
+              <p class="title--xs">위시리스트</p>
+            </div>
+          </div>
+        </div> -->
+      </section>
+    </main>
+
+
+    <!-- footer include -->
+    <footer class="footer--blue" id="footer"></footer>
+  </div> <!-- body__inner -->
+
+
+  <!--===== 태블릿 & 모바일 햄버거 메뉴 include =====-->
+  <div class="mobile-menu" id="mobileMenu"></div>
+
+
+  <script src="js/common/import.js"></script>
+</body>
+</html>

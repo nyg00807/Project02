@@ -1,0 +1,1062 @@
+/* ============================================================
+  MAIN VISUAL SECTION
+============================================================ */
+#mainVisualSec {
+  width: 100%;
+  height: 570px;
+  background: url(../../assets/img/pages/store/page_title_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+#mainVisualSec::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right,
+      rgba(18, 18, 18, 0.25) 0%,
+      rgba(18, 18, 18, 0.75) 50%,
+      rgba(18, 18, 18, 0.25) 100%);
+}
+
+#mainVisualSec .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual__text {
+  color: var(--white-100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+/* ============================================================
+  OVERLAY
+============================================================ */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.filter__box.active,
+.wishlist__panel.active {
+  z-index: 100000;
+}
+/* ============================================================
+  STORE LAYOUT & FILTER BOX
+============================================================ */
+#mainStore {
+  background: linear-gradient(to bottom,
+      var(--black-600) 0%,
+      #141C2F 100%);
+}
+
+#mainStore .inner {
+  display: flex;
+  gap: var(--basic-gap);
+  position: relative;
+}
+
+.btn--medium.btn--solid-purple {
+  display: none;
+}
+
+.tab__filter__btn {
+  height: 40px;
+  display: none;
+}
+
+.game__search.tab {
+  display: none;
+}
+
+.filter__box {
+  width: var(--column-2);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.filter__box .btn--solid-blue {
+  width: var(--column-2);
+  height: 40px;
+  padding: 0 30px;
+}
+
+.filter__box .btn--solid-blue span {
+  font-size: 16px;
+}
+
+.filter__box__main {
+  width: 100%;
+  height: 420px;
+  background-color: var(--black-600);
+  border: 1px solid var(--black-500);
+  border-radius: var(--border-radius-20);
+  color: var(--white-100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--basic-gap);
+  padding-top: 20px;
+}
+
+.filter__wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.filter__title {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.filter__title i {
+  transition: var(--transition-035);
+}
+
+.filter__title.active {
+  background-color: #142d7d;
+}
+
+.filter__title.active i {
+  transform: rotate(180deg);
+}
+
+/* ============================================================
+  ACCORDION
+============================================================ */
+.accordion {
+  width: 100%;
+  max-height: 0;
+  visibility: hidden;
+  overflow-y: hidden;
+  transition: max-height var(--transition-035) ease, visibility var(--transition-035);
+}
+
+.accordion.active {
+  overflow-y: auto;
+  visibility: visible;
+  max-height: 184px;
+}
+
+.accordion::-webkit-scrollbar {
+  width: 4px;
+  display: block;
+}
+
+.accordion::-webkit-scrollbar-thumb {
+  background: var(--blue-100);
+  border-radius: var(--border-radius-10);
+}
+
+.accordion::-webkit-scrollbar-track {
+  background-color: rgba(37, 99, 235, 0.15);
+}
+
+.accordion li {
+  cursor: pointer;
+  width: 100%;
+  height: 46px;
+  background-color: rgba(37, 99, 235, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 16px;
+  transition: var(--transition-035);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .accordion li:hover {
+    color: var(--blue-300);
+  }
+}
+
+.accordion__chk {
+  width: 18px;
+  height: 18px;
+  background-color: var(--white-100);
+  border: 2px solid var(--blue-300);
+  border-radius: 4px;
+  transition: var(--transition-035);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .accordion li:hover .accordion__chk {
+    border: 2px solid var(--blue-500)
+  }
+}
+
+.accordion li.active {
+  background-color: rgba(37, 99, 235, 0.3);
+}
+
+.accordion li.active .accordion__chk {
+  background-color: var(--white-100);
+  border-color: var(--blue-500);
+  position: relative;
+}
+
+.accordion li.active .accordion__chk::after {
+  content: '\F26E';
+  color: var(--blue-500);
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "bootstrap-icons";
+}
+
+/* ============================================================
+  GAME CARDS
+============================================================ */
+.game__wrap {
+  width: 100%;
+}
+
+.game__cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 20px;
+  margin-top: var(--basic-gap);
+}
+
+.card {
+  width: 100%;
+  aspect-ratio: 314 / 453;
+  background-color: #19253F;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card__discount {
+  width: clamp(70px, 6vw, 70px);
+  height: clamp(30px, 3vw, 40px);
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: var(--cyan-400);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.card__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px 24px 0 0;
+}
+
+.card__text {
+  color: var(--white-100);
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.card__text__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.text__name {
+  flex: 1;
+  min-width: 0;
+}
+
+.text__name .title--s {
+  font-size: clamp(15px, 1.1vw + 0.5rem, 18px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.text__star .title--s {
+  font-size: clamp(14px, 1vw + 0.4rem, 18px);
+  color: var(--yellow-400);
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.text__dev {
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+  min-height: 24px;
+  margin-top: 6px;
+  background-color: var(--cyan-500);
+  border-radius: 5px;
+  padding: 2px 8px;
+  width: fit-content;
+}
+
+.text__dev .text--s {
+  font-size: clamp(11px, 0.8vw + 0.3rem, 14px);
+  color: #34415D;
+}
+
+.card__text__bottom {
+  margin-top: auto;
+  padding-top: 10px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.card__text__bottom .title--l {
+  font-size: clamp(18px, 1.5vw + 0.5rem, 24px);
+}
+
+.text__price__discount .text--s {
+  font-size: clamp(12px, 0.8vw + 0.3rem, 14px);
+  color: var(--cyan-500);
+  text-decoration: line-through;
+}
+
+/* ============================================================
+  PAGINATION
+============================================================ */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 48px;
+  padding-bottom: 60px;
+}
+
+.page-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #142D7D;
+  color: var(--white-100);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .page-btn:hover {
+    background-color: var(--blue-200);
+    color: var(--blue-500);
+  }
+}
+
+.page-btn:disabled {
+  background-color: var(--black-400);
+  color: var(--white-100);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.page-btn.active {
+  background-color: var(--white-100);
+  color: var(--blue-500);
+}
+
+/* ============================================================
+  WISHLIST
+============================================================ */
+.wishlist__wrap {
+  position: absolute;
+  bottom: -60px;
+  right: 0;
+}
+
+.wishlist {
+  height: 40px;
+  background-color: #293C64;
+  color: var(--red-400);
+  border: 2px solid var(--red-400);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+  gap: 6px;
+  transition: var(--transition-035);
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .wishlist:hover {
+    background-color: var(--red-400);
+    color: #293C64;
+  }
+}
+
+/* ============================================================
+  CARD HOVER DETAIL
+============================================================ */
+.card-item {
+  position: relative;
+}
+
+.card-item.active .card__hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-item:hover .card__hover {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.card__hover {
+  z-index: 10;
+  aspect-ratio: 1.2 / 1;
+  background-color: #323D55;
+  border-radius: 24px;
+  padding: var(--basic-gap);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 650px;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.card__wishlist {
+  display: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--red-400);
+  transition: transform 0.2s ease;
+}
+
+.card__wishlist.active i {
+  color: var(--red-400);
+}
+
+.card__hover__video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 24px;
+}
+
+.card__hover__video video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 24px;
+}
+
+.card__hover__mid {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: var(--white-100);
+  margin-top: 16px;
+}
+
+.hover__mid__left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.mid__left__name .title--s {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  line-height: 1.4;
+  max-height: 2.8em;
+}
+
+.mid__left__bottom {
+  display: flex;
+  gap: 12px;
+}
+
+.bottom__star {
+  color: var(--yellow-400);
+}
+
+.hover__mid__discount {
+  width: 70px;
+  height: 40px;
+  border-radius: 6px;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cyan-400);
+  color: #19253F;
+}
+
+.hover__mid__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.right__discount__price {
+  color: var(--cyan-500);
+  text-decoration: line-through;
+}
+
+.card__hover__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.bottom__genre__box {
+  display: flex;
+  gap: 8px;
+}
+
+.genre {
+  background-color: #242f47;
+  border-radius: 6px;
+  color: var(--white-100);
+  padding: 4px;
+}
+
+.genre .title--xs {
+  font-size: 14px;
+}
+
+.hover__wishlist {
+  height: 40px;
+  background-color: var(--white-100);
+  color: var(--red-400);
+  border: 1px solid var(--red-400);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+  gap: 6px;
+  transition: var(--transition-035);
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hover__wishlist:hover {
+    background-color: var(--red-100);
+  }
+}
+
+.hover__wishlist:active {
+  background-color: var(--red-300);
+  color: var(--white-100);
+}
+
+.hover__wishlist.active i {
+  color: var(--red-400);
+}
+
+/* ============================================================
+  WISHLIST PANEL
+============================================================ */
+.empty-msg {
+  margin-top: 30px;
+  justify-content: center;
+  text-align: center;
+  color: var(--white-100);
+  font-size: 16px;
+}
+
+.wishlist__panel {
+  width: 468px;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  border-radius: 24px;
+  background-color: #293C65;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
+  transition: var(--transition-035);
+  z-index: 10;
+}
+
+.wishlist__panel.active {
+  visibility: visible;
+  max-height: 700px;
+}
+
+.wishlist__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wishlist__title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--red-400);
+}
+
+.wishlist__title i {
+  font-size: 24px;
+}
+
+.wishlist__x {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--white-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: var(--transition-035);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .wishlist__x:hover {
+    opacity: 1;
+  }
+}
+
+.wishlist__x i {
+  color: var(--white-100);
+}
+
+.wishlist__count {
+  color: var(--white-100);
+  text-align: right;
+  margin-top: 16px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.wishlist__list {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 500px;
+  min-height: 100px;
+  overflow-y: auto;
+}
+.wishlist__list::-webkit-scrollbar {
+  width: 4px;
+  display: block;
+}
+
+.wishlist__list::-webkit-scrollbar-thumb {
+  background: var(--blue-100);
+  border-radius: var(--border-radius-10);
+}
+
+.wishlist__list::-webkit-scrollbar-track {
+  background-color: rgba(37, 99, 235, 0.15);
+}
+
+.wishlist__item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  background-color: #19253F;
+  border-radius: 16px;
+}
+
+.item__left {
+  width: 82px;
+  aspect-ratio: 1/1;
+}
+
+.item__left img {
+  border-radius: 15px;
+}
+
+.item__mid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--white-100);
+  flex: 1;
+}
+
+.item__star {
+  color: var(--yellow-400);
+}
+
+.item__mid__bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.item__mid__bottom .text--s {
+  color: var(--black-300);
+  text-decoration: line-through;
+}
+
+.item__discount {
+  background-color: var(--cyan-400);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 6px;
+  color: #19253F;
+}
+
+.item__right i {
+  font-size: 24px;
+  color: var(--black-300);
+  cursor: pointer;
+  transition: var(--transition-035);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .item__right i:hover {
+    color: var(--red-400);
+  }
+}
+
+.wishlist__all__delete {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000d37;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  color: var(--white-100);
+  gap: 6px;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: var(--transition-035);
+}
+
+.wishlist__all__delete i {
+  color: var(--black-300);
+  transition: var(--transition-035);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .wishlist__all__delete:hover {
+    border: 2px solid var(--red-400);
+    color: var(--red-400);
+  }
+
+  .wishlist__all__delete:hover i {
+    color: var(--red-400);
+  }
+}
+
+/* ============================================================
+  MEDIA QUERIES
+============================================================ */
+@media all and (max-width: 1024px) {
+  #mainVisualSec{
+    height: 450px;
+  }
+  #mainStore{
+    padding-top: 64px;
+    padding-bottom: 80px;
+  }
+  #mainStore .inner {
+    flex-direction: column;
+  }
+
+  .game__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .accordion.active {
+    max-height: 276px;
+  }
+
+  .tab__filter__btn {
+    display: block;
+  }
+
+  .game__search {
+    display: none;
+  }
+
+  .game__search.tab {
+    display: block;
+    padding: 0 24px;
+    width: 100%;
+  }
+
+  .game__search.tab input {
+    width: 100%;
+  }
+
+  .filter__box {
+    z-index: 99999;
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    background-color: var(--black-600);
+    overflow: hidden;
+    width: 0;
+  }
+
+  .tab__text {
+    display: flex;
+    color: var(--white-100);
+    height: 100px;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  .x__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--white-100);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+
+  .filter__box.active {
+    width: 50%;
+  }
+
+  .filter__box .page-button {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .btn--large.btn--solid-blue {
+    width: 165px;
+  }
+
+  .filter__box__main {
+    background-color: var(--black-600);
+    border: none;
+    border-radius: 0;
+  }
+
+  .card__text__bottom {
+    position: relative;
+  }
+
+  .card__wishlist {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #mainVisualSec{
+    height: 260px;
+  }
+  .btn--medium.btn--solid-purple {
+    display: block;
+    width: 165px;
+  }
+  .visual__text{
+    gap: 6px;
+  }
+  .visual__text h1 {
+    font-size: 32px;
+  }
+
+  .visual__text .title--s {
+    font-size: 16px;
+    text-align: center;
+    width: 200px;
+  }
+
+  .filter__box {
+    height: 0;
+  }
+
+  .filter__box.active {
+    padding-top: 36px;
+    border-radius: 24px 24px 0 0;
+    width: 100%;
+    height: 80%;
+    bottom: 0;
+    top: auto;
+  }
+
+  .tab__text {
+    display: none;
+  }
+
+  .filter__box__main {
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 40px;
+    display: block;
+  }
+
+  .filter__wrap {
+    overflow: visible;
+  }
+
+  .accordion.active {
+    visibility: visible;
+    max-height: 2000px;
+    overflow-y: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  .game__cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .card{
+    aspect-ratio: 4/1;
+    flex-direction: row;
+    border-radius: 12px;
+  }
+  .card__img {
+    width: 30%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .card__img img {
+    border-radius: 12px;
+  }
+
+  .card__discount {
+    width: clamp(40px, 6vw, 50px);
+    height: clamp(20px, 3vw, 20px);
+    top: 5px;
+    left: 5px;
+  }
+
+  .card__discount .title--l {
+    font-size: 12px;
+  }
+
+  .text__name .title--s {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .text__dev {
+    display: none;
+  }
+  .empty-msg {
+    margin: auto;
+
+  }
+  .wishlist__wrap {
+    height: 40px;
+    top: 7px;
+    right: 120px;
+  }
+
+  .wishlist__panel {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 480px;
+  }
+
+  .wishlist__panel.active {
+    width: 100%;
+    height: 480px;
+  }
+
+  .item__mid>.title--xs {
+    width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .item__discount {
+    display: none;
+  }
+  .wishlist__list{
+    min-height: 300px;
+  }
+  .wishlist__all__delete {
+    padding: 10px;
+  }
+  .wishlist__item{
+    border-radius: 16px;
+  }
+  .wishlist__item .title--m {
+    font-size: 16px;
+  }
+
+  .wishlist__item .text--s {
+    font-size: 12px;
+  }
+}
+
