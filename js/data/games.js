@@ -75,7 +75,7 @@ window.games = [
     genre: ['horror', 'story', 'cinematic', 'action', 'adventure', 'openworld'],
     star: 4.9,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/spiderMan2/spiderMan2_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/spiderMan2/spiderMan2_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://pbs.twimg.com/media/F5mubISWIAE8EHj?format=jpg&name=large',
     mediaGall02: 'https://pbs.twimg.com/media/F5mudZDWoAAFxB7?format=jpg&name=large',
@@ -143,7 +143,7 @@ window.games = [
     genre: ['cyber', 'story', 'cinematic', 'adventure', 'sf'],
     star: 4.7,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/detroitBH/detroitBH_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/detroitBH/detroitBH_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://www.gameuidatabase.com/uploads/Detroit-Become-Human12092020-072320-63721.jpg',
     mediaGall02: 'https://www.gameuidatabase.com/uploads/Detroit-Become-Human12092020-072325-95954.jpg',
@@ -209,7 +209,7 @@ window.games = [
     genre: ['soul', 'story', 'action', 'adventure', 'openworld', 'rpg'],
     star: 4.8,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/ghostYotei/ghostYotei_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/ghostYotei/ghostYotei_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://www.gameuidatabase.com/uploads/Ghost-of-Ytei10022025-011905-84722.jpg',
     mediaGall02: 'https://www.gameuidatabase.com/uploads/Ghost-of-Ytei10022025-012243-42094.jpg',
@@ -275,7 +275,7 @@ window.games = [
     genre: ['soul', 'story', 'action', 'adventure', 'openworld', 'rpg'],
     star: 4.9,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/ghostTsushima/ghostTsushima_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/ghostTsushima/ghostTsushima_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://www.gameuidatabase.com/uploads/Ghost-of-Tsushima08142020-060913-24404.jpg',
     mediaGall02: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/ss_11409331d57966ef193d66ffcded569d02a4e034.1920x1080.jpg?t=1763409398',
@@ -341,7 +341,7 @@ window.games = [
     genre: ['story', 'action', 'adventure', 'openworld', 'rpg'],
     star: 4.8,
     logoExtension: 'svg',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/horizonFW/horizonFW_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/horizonFW/horizonFW_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://preview.redd.it/horizon-forbidden-west-screenshots-from-my-ps4-v0-otu8ofvottyc1.png?width=1080&crop=smart&auto=webp&s=b9ef94e6bc7e58967001df4e4b0bc32d7a3cadff',
     mediaGall02: 'https://preview.redd.it/horizon-forbidden-west-screenshots-from-my-ps4-v0-76t0vh5sttyc1.png?width=1080&crop=smart&auto=webp&s=5832e9166fddb1e4d502560d2aa582a23e59bd15',
@@ -543,7 +543,7 @@ window.games = [
     genre: ['horror', 'shoot', 'story', 'cinematic', 'action', 'adventure', 'puzzle'],
     star: 4.5,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/re3/re3_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/re3/re3_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://klardendum.com/wp-content/uploads/2020/04/re3new3.jpg',
     mediaGall02: 'https://klardendum.com/wp-content/uploads/2020/04/re3new2.jpg',
@@ -611,7 +611,7 @@ window.games = [
     genre: ['horror', 'shoot', 'story', 'cinematic', 'action', 'adventure', 'puzzle'],
     star: 4.9,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/re4/re4_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/re4/re4_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2050650/ss_59d1b19964cc532213df92c8287b75a0bffeb33c.1920x1080.jpg?t=1770093365',
     mediaGall02: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2050650/ss_69810f4cd155912fdfdd21da70181df7d454c874.1920x1080.jpg?t=1770093365',
@@ -677,7 +677,7 @@ window.games = [
     genre: ['horror', 'shoot', 'story', 'cinematic', 'action', 'adventure', 'puzzle'],
     star: 4.8,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/reRequiem/reRequiem_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/reRequiem/reRequiem_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3764200/3f63fb0ce70f3e97799226b70ebea4d4794c53a1/ss_3f63fb0ce70f3e97799226b70ebea4d4794c53a1.1920x1080.jpg?t=1769125588',
     mediaGall02: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3764200/9e35202b6c8262496e1c57275c51bcead7232249/ss_9e35202b6c8262496e1c57275c51bcead7232249.1920x1080.jpg?t=1769125588',
@@ -743,7 +743,7 @@ window.games = [
     genre: ['horror', 'story', 'action', 'adventure', 'puzzle', 'cowork'],
     star: 4.2,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/lnm3/lnm3_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/lnm3/lnm3_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1392860/d0802b426b1116c4d0f7c92cc81de359bc342345/ss_d0802b426b1116c4d0f7c92cc81de359bc342345.1920x1080.jpg?t=1767887616',
     mediaGall02: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1392860/c9123d3c3e1c639937caa12185a1d3fc4b43d413/ss_c9123d3c3e1c639937caa12185a1d3fc4b43d413.1920x1080.jpg?t=1767887616',
@@ -811,7 +811,7 @@ window.games = [
     genre: ['story', 'action', 'adventure', 'puzzle', 'cowork'],
     star: 4.8,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/itTakesTwo/itTakesTwo_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/itTakesTwo/itTakesTwo_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1426210/ss_3e59753eefaba9a7704a18e902b48e8d38e95e0b.1920x1080.jpg?t=1763484491',
     mediaGall02: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1426210/ss_6e987a0678b013bfd0073a9ac4703e1f04ca4dea.1920x1080.jpg?t=1763484491',
@@ -877,7 +877,7 @@ window.games = [
     genre: ['story', 'action', 'adventure', 'fantasy', 'puzzle', 'cowork', 'sf'],
     star: 4.7,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/splitFiction/splitFiction_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/splitFiction/splitFiction_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2001120/5e3f5393e455fad3b5fa3f2fe469d9ad6b519069/ss_5e3f5393e455fad3b5fa3f2fe469d9ad6b519069.1920x1080.jpg?t=1763484567',
     mediaGall02: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2001120/77070a9b5767e83d8482ab88b6ee7b881734ea8e/ss_77070a9b5767e83d8482ab88b6ee7b881734ea8e.1920x1080.jpg?t=1763484567',
@@ -943,7 +943,7 @@ window.games = [
     genre: ['cyber', 'adventure', 'puzzle', 'sf'],
     star: 4.9,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/stray/stray_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/stray/stray_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://www.gameuidatabase.com/uploads/Stray07242022-021947-88548.jpg',
     mediaGall02: 'https://www.gameuidatabase.com/uploads/Stray07242022-021943-93084.jpg',
@@ -1009,7 +1009,7 @@ window.games = [
     genre: ['soul', 'story', 'action', 'adventure', 'openworld', 'fantasy', 'rpg'],
     star: 4.5,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/demonsSouls/demonsSouls_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/demonsSouls/demonsSouls_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://gmedia.playstation.com/is/image/SIEPDC/demons-souls-screenshot-15-disclaimer-en-09nov20?$2400px$',
     mediaGall02: 'https://gmedia.playstation.com/is/image/SIEPDC/demons-souls-screenshot-16-disclaimer-en-09nov20?$2400px$',
@@ -1075,7 +1075,7 @@ window.games = [
     genre: ['soul', 'story', 'action', 'adventure', 'openworld', 'fantasy', 'rpg'],
     star: 4.9,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/eldenRing/eldenRing_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/eldenRing/eldenRing_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://gmedia.playstation.com/is/image/SIEPDC/elden-ring-screenshot-08-en-15jun21?$2400px$',
     mediaGall02: 'https://gmedia.playstation.com/is/image/SIEPDC/elden-ring-screenshot-13-en-15jun21?$2400px$',
@@ -1141,7 +1141,7 @@ window.games = [
     genre: ['story', 'adventure', 'openworld', 'fantasy', 'puzzle', 'rpg'],
     star: 4.7,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/hogwartsLegacy/hogwartsLegacy_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/hogwartsLegacy/hogwartsLegacy_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://gmedia.playstation.com/is/image/SIEPDC/hogwarts-legacy-screen-01-ps5-en-02oct20?$2400px$',
     mediaGall02: 'https://gmedia.playstation.com/is/image/SIEPDC/hogwarts-legacy-screen-02-ps5-en-02oct20?$2400px$',
@@ -1479,7 +1479,7 @@ window.games = [
     genre: ['horror', 'shoot', 'action', 'openworld', 'cowork', 'sf'],
     star: 4.6,
     logoExtension: 'svg',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/helldivers2/helldivers2_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/helldivers2/helldivers2_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://gmedia.playstation.com/is/image/SIEPDC/helldivers-2-screenshot-disclaimer-18-en-08sept23?$2400px$',
     mediaGall02: 'https://gmedia.playstation.com/is/image/SIEPDC/helldivers-2-screenshot-disclaimer-02-en-24may23?$2400px$',
@@ -1809,7 +1809,7 @@ window.games = [
     genre: ['story', 'action', 'adventure', 'openworld', 'fantasy', 'rpg'],
     star: 4.9,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/witcher3/witcher3_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/witcher3/witcher3_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://gmedia.playstation.com/is/image/SIEPDC/TW3NG_PressPreviews_PS5_Toussaint_RGB_clean?$2400px$',
     mediaGall02: 'https://gmedia.playstation.com/is/image/SIEPDC/the-witcher-3-screen-13-ps4-all-07sep15?$2400px$',
@@ -1941,7 +1941,7 @@ window.games = [
     genre: ['story', 'action', 'adventure', 'openworld', 'rpg'],
     star: 4.8,
     logoExtension: 'webp',
-    mainVideo: 'https://pub-df80c62e9e354e6c9ef3b84167c35919.r2.dev/assets/video/games/kcd2/kcd2_trailer.mp4',
+    mainVideo: 'https://pub-c9f329cfad314414b2bd57a0206c5fc4.r2.dev/assets/video/games/kcd2/kcd2_trailer.mp4',
     // 게임 상세 미디어 갤러리
     mediaGall01: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1771300/ss_935ddb59f90bc2c21c706132cb9b446fe7851c19.1920x1080.jpg?t=1769507535',
     mediaGall02: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1771300/ss_709f3329562cd2cfe6db70bac908b3e72eaef83b.1920x1080.jpg?t=1769507535',
