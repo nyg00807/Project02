@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/icon/playstation.ico">
+  <title>PlayStation 게임</title>
+  <link rel="stylesheet" href="css/common/import.css">
+  <link rel="stylesheet" href="css/pages/game.css">
+</head>
+<body id="gameBody">
+  <div class="body__inner">
+    <!-- header include -->
+    <header class="header" id="header"></header>
+
+
+    <main class="main">
+      <!-- section: 게임 메인 비디오와 정보 -->
+      <section class="section" id="gameMainSec">
+        <div class="inner">
+          <video id="gameMainVideo" src="" muted autoplay loop playsinline preload="auto"></video>
+          <div class="main-info-wrap">
+            <div class="main-info__logo-dev">
+              <img class="logo" id="gameMainLogo" src="" alt="게임 로고">
+              <div class="dev title--m" id="gameMainDev"></div>
+            </div>
+            <div class="main-info__price-star">
+              <div class="price">
+                <div class="price__before">
+                  <s>₩ <span id="originalPrice"></span></s>
+                  <span class="discount">-<span id="discountPercent"></span>%</span>
+                </div>
+                <div class="price__after">₩ <span id="totalPrice"></span></div>
+              </div>
+              <div class="main-info__star-gotoreview">
+                <span class="title--l" id="gameStarPoint"></span>
+                <div class="main-info__star-wrap">
+                  <i class="bi bi-star-fill icon--large"></i>
+                  <i class="bi bi-star-fill icon--large"></i>
+                  <i class="bi bi-star-fill icon--large"></i>
+                  <i class="bi bi-star-fill icon--large"></i>
+                  <i class="bi bi-star-half icon--large"></i>
+                </div>
+                <a href="#reviewSec" class="go-to-review title--s">리뷰 32k <i class="bi bi-arrow-right-circle-fill icon--small"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- section: 미디어 갤러리와 유튜브 영상 -->
+      <section class="section" id="mediaGallSec">
+        <div class="inner">
+          <div class="media-gallery" id="mediaGallery">
+            <div class="media-gallery__content">
+              <h1>Media Gallery</h1>
+              <div class="swiper" id="mediaGallSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img id="mediaGall01" src="" alt="미디어 갤러리">
+                  </div>
+                  <div class="swiper-slide">
+                    <img id="mediaGall02" src="" alt="미디어 갤러리">
+                  </div>
+                  <div class="swiper-slide">
+                    <img id="mediaGall03" src="" alt="미디어 갤러리">
+                  </div>
+                  <div class="swiper-slide">
+                    <img id="mediaGall04" src="" alt="미디어 갤러리">
+                  </div>
+                  <div class="swiper-slide" >
+                    <img id="mediaGall05" src="" alt="미디어 갤러리">
+                  </div>
+                  <div class="swiper-slide" >
+                    <img id="mediaGall06" src="" alt="미디어 갤러리">
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <!-- iframe 4개일 때 -->
+          <!-- <div class="iframe-wrap--4">
+            <iframe src="https://www.youtube.com/embed/wHMNQzLG_Jg?si=LnfzQFnnJ-yF1x6D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/unYFdcEjV9k?si=28mjY173ln80X8_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/DCl5zKHy7ak?si=kw99ClpfclWklm5F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/aH0haX-5iZ8?si=8rXR_SB0-0qwr7td" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div> -->
+        </div>
+      </section>
+
+
+      <!-- section: 캐릭터 소개 -->
+      <section class="section" id="characterSec">
+        <div class="inner">
+          <h1>Characters</h1>
+
+          <!-- 세로형 캐릭터 : cr-vertical-swiper
+           가로형 캐릭터 : cr-horizontal-swiper -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="" alt="캐릭터">
+                <div class="cr-info-wrap">
+                  <div class="cr__name"></div>
+                  <div class="cr__line-wrap">
+                    <img src="" alt="quote">
+                    <p class="line"></p>
+                    <img src="" alt="quote">
+                  </div>
+                  <p class="cr__desc"></p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="" alt="캐릭터">
+                <div class="cr-info-wrap">
+                  <div class="cr__name"></div>
+                  <div class="cr__line-wrap">
+                    <img src="" alt="quote">
+                    <p class="line"></p>
+                    <img src="" alt="quote">
+                  </div>
+                  <p class="cr__desc"></p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="" alt="캐릭터">
+                <div class="cr-info-wrap">
+                  <div class="cr__name"></div>
+                  <div class="cr__line-wrap">
+                    <img src="" alt="quote">
+                    <p class="line"></p>
+                    <img src="" alt="quote">
+                  </div>
+                  <p class="cr__desc"></p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="" alt="캐릭터">
+                <div class="cr-info-wrap">
+                  <div class="cr__name"></div>
+                  <div class="cr__line-wrap">
+                    <img src="" alt="quote">
+                    <p class="line"></p>
+                    <img src="" alt="quote">
+                  </div>
+                  <p class="cr__desc"></p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="" alt="캐릭터">
+                <div class="cr-info-wrap">
+                  <div class="cr__name"></div>
+                  <div class="cr__line-wrap">
+                    <img src="" alt="quote">
+                    <p class="line"></p>
+                    <img src="" alt="quote">
+                  </div>
+                  <p class="cr__desc"></p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <!-- 가로형 캐릭터 소개 -->
+          <!-- <div class="swiper cr-horizontal-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://gmedia.playstation.com/is/image/SIEPDC/marvels-spider-man-2-friends-harry-osborn-en-03oct23.png?$1600px$" alt="캐릭터">
+                <div class="cr-info-wrap">
+                  <div class="cr__name">해리 오스본</div>
+                  <div class="cr__line-wrap">
+                    <img src="assets/img/pages/game/quote_left_g.svg" alt="quote">
+                    <p class="line">
+                      이번엔 도망치지 않을게. 내가 할 수 있는 방식으로 세상을 돕고 싶어.
+                    </p>
+                    <img src="assets/img/pages/game/quote_right_g.svg" alt="quote">
+                  </div>
+                  <p class="cr__desc">
+                    노먼 오스본의 아들입니다. 그는 자기 어머니를 죽인 병과 같은 병을 치료하기 위해 지난 몇 년간 떠나 있었지만, 이제 삶에 대한 새로운 희망을 가지고 돌아왔습니다.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://gmedia.playstation.com/is/image/SIEPDC/marvels-spider-man-2-friends-hailey-cooper-en-03oct23.png?$800px$" alt="캐릭터">
+                <div class="cr-info-wrap">
+                  <div class="cr__name">헤일리 쿠퍼</div>
+                  <div class="cr__line-wrap">
+                    <img src="assets/img/pages/game/quote_left_g.svg" alt="quote">
+                    <p class="line">
+                      말이 없어도 괜찮아. 사람을 이해하는 방법은 하나만 있는 게 아니니까.
+                    </p>
+                    <img src="assets/img/pages/game/quote_right_g.svg" alt="quote">
+                  </div>
+                  <p class="cr__desc">
+                    사회 운동가, 길거리 아티스트이자 마일즈의 가장 가까운 친구 중 하나입니다. 창의적이며, 재밌고, 지적이며, 온화하며 특히 마일즈에 관해 그렇습니다.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://gmedia.playstation.com/is/image/SIEPDC/marvels-spider-man-2-friends-rio-morales-en-03oct23.png?$800px$" alt="캐릭터">
+                <div class="cr-info-wrap">
+                  <div class="cr__name">리오 모랄레스</div>
+                  <div class="cr__line-wrap">
+                    <img src="assets/img/pages/game/quote_left_g.svg" alt="quote">
+                    <p class="line">
+                      도시는 사람으로 이루어져 있어요. 그래서 저는 그 사람들을 지키기 위해 일합니다.
+                    </p>
+                    <img src="assets/img/pages/game/quote_right_g.svg" alt="quote">
+                  </div>
+                  <p class="cr__desc">
+                    어떤 사람은 그녀를 마일즈의 멋진 엄마로 알고 있기도 하지만, 시민 대부분은 그녀를 더욱 살기 좋고 안전한 마블 뉴욕을 만들기 위해 끊임 없이 노력하는 시의원 리오 모랄레스로 알고 있습니다.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://gmedia.playstation.com/is/image/SIEPDC/marvels-spider-man-2-friends-ganke-lee-en-03oct23.png?$800px$" alt="캐릭터">
+                <div class="cr-info-wrap">
+                  <div class="cr__name">강케 리</div>
+                  <div class="cr__line-wrap">
+                    <img src="assets/img/pages/game/quote_left_g.svg" alt="quote">
+                    <p class="line">
+                      좋아, 네가 현장 담당이면 나는 두뇌 담당이네. 팀워크 가자!
+                    </p>
+                    <img src="assets/img/pages/game/quote_right_g.svg" alt="quote">
+                  </div>
+                  <p class="cr__desc">
+                    마일즈의 가장 친한 친구이자 마음을 터놓을 수 있는 히어로 업무를 위한 파트너입니다. 강케는 마일즈가 자신이 스파이더맨이라는 것을 알린 두 번째 인물이기도 합니다.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://gmedia.playstation.com/is/image/SIEPDC/marvels-spider-man-2-foes-carousel-venom-en-03oct23?$800px$" alt="캐릭터">
+                <div class="cr-info-wrap">
+                  <div class="cr__name">베놈</div>
+                  <div class="cr__line-wrap">
+                    <img src="assets/img/pages/game/quote_left_g.svg" alt="quote">
+                    <p class="line">
+                      우리는 굶주렸다. 그리고 이 도시는 우리의 것이다.
+                    </p>
+                    <img src="assets/img/pages/game/quote_right_g.svg" alt="quote">
+                  </div>
+                  <p class="cr__desc">
+                    이 거대하고 강력한 괴물은 마치 포악한 자연재해와 같은 파괴력을 가지고 마블의 뉴욕을 찾아왔습니다. 이 도시는 수년 동안 많은 위기에 대처했지만, 이 정도의 위협은 처음입니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div> -->
+        </div>
+      </section>
+
+
+      <!-- section: 게임을 해야 하는 이유 -->
+      <section class="section" id="mustPlaySec">
+        <div class="inner">
+          <h1>Must Play Now</h1>
+          <div class="must-play01">
+            <video src="" muted autoplay loop playsinline></video>
+            <div class="must-play__overlay"></div>
+            <div class="must-play__txt-wrap">
+              <h2 class="must-play__title"></h2>
+              <p class="must-play__desc"></p>
+            </div>
+          </div>
+          <div class="must-play02">
+            <video src="" muted autoplay loop playsinline></video>
+            <div class="must-play__overlay"></div>
+            <div class="must-play__txt-wrap">
+              <h2 class="must-play__title"></h2>
+              <p class="must-play__desc"></p>
+            </div>
+          </div>
+          <div class="must-play03">
+            <video src="" muted autoplay loop playsinline></video>
+            <div class="must-play__overlay"></div>
+            <div class="must-play__txt-wrap">
+              <h2 class="must-play__title"></h2>
+              <p class="must-play__desc"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- section: 게임 리뷰 -->
+      <section class="section" id="reviewSec">
+        <div class="inner">
+          <h1>Reviews</h1>
+
+          <div class="review-sec__scroe-wrap">
+            <div class="score">4.5</div>
+            <div class="review-sec__star-wrap">
+              <i class="bi bi-star-fill icon--large"></i>
+              <i class="bi bi-star-fill icon--large"></i>
+              <i class="bi bi-star-fill icon--large"></i>
+              <i class="bi bi-star-fill icon--large"></i>
+              <i class="bi bi-star-half icon--large"></i>
+            </div>
+            <p class="title--m">
+              게임을 플레이하고 당신의 후기를 남겨주세요.
+            </p>
+          </div>
+
+          <div class="grade-wrap">
+            <div class="grade">
+              <div class="grade__count"><span id="perfectScore">0</span>%</div>
+              <div class="grade__title">5점 평가</div>
+              <p class="grade__desc">PlayStation 유저 리뷰</p>
+            </div>
+            <div class="grade">
+              <div class="grade__count"><span id="playerNum">0</span>k +</div>
+              <div class="grade__title">플레이어 수</div>
+              <p class="grade__desc">전세계 게임 유저 수</p>
+            </div>
+            <div class="grade">
+              <div class="grade__count"><span id="allReview">0</span>k +</div>
+              <div class="grade__title">평가 수</div>
+              <p class="grade__desc">전체 리뷰 개수</p>
+            </div>
+            <div class="grade">
+              <div class="grade__count"><span id="award">0</span> +</div>
+              <div class="grade__title">어워드</div>
+              <p class="grade__desc">Game of the Year</p>
+            </div>
+          </div>
+
+          <div class="review-wrap">
+            <div class="review">
+              <div class="review__title-wrap">
+                <div class="review__user">
+                  <img src="assets/img/pages/game/avatar_1.png" alt="유저 아바타">
+                  <div class="user__name-date">
+                    <div class="user-name">Marcus_Chen</div>
+                    <div class="user-date">2025.12.15</div>
+                  </div>
+                </div>
+                <div class="user-star">
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-half icon--medium"></i>
+                </div>
+              </div>
+              <div class="review__content">
+                리마스터가 되면서 그래픽이 압도적으로 좋아졌습니다. 또한 로딩 시간도 단축되어 쾌적한 플레이가 가능합니다. 예전에 다크소울이나 블러드본의 경우 로딩에 한 세월이 걸리거나, 몹이 많이 나오는 곳에 가면 버벅되는 현상이 있었는데 전혀 이런 부분이 없이 스무한 게임 진행이 가능합니다.
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__title-wrap">
+                <div class="review__user">
+                  <img src="assets/img/pages/game/avatar_2.png" alt="유저 아바타">
+                  <div class="user__name-date">
+                    <div class="user-name">Sarah_Williams</div>
+                    <div class="user-date">2025.12.08</div>
+                  </div>
+                </div>
+                <div class="user-star">
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                </div>
+              </div>
+              <div class="review__content">
+                이전 시리즈에서도 느꼈었지만, 손맛 하나는 일품인 게임이라 생각합니다. 듀얼센스 진동을 사용하는 게임 중에서 이 정도의 손맛이 느껴지는 게임은 저는 본 적이 없었습니다. 공격 강도, 방어의 둔탁한 느낌 등 무엇 하나 빠질 게 없습니다. 아슬아슬하게 적의 공격을 회피한 후 스태미너를 모두 태워서 연타를 날릴 때 쾌감은 패드를 놓지 못하게 만드는 가장 중요한 중독적인 요소인 것 같습니다.
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__title-wrap">
+                <div class="review__user">
+                  <img src="assets/img/pages/game/avatar_3.png" alt="유저 아바타">
+                  <div class="user__name-date">
+                    <div class="user-name">James_Lodriguez</div>
+                    <div class="user-date">2025.11.21</div>
+                  </div>
+                </div>
+                <div class="user-star">
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-half icon--medium"></i>
+                </div>
+              </div>
+              <div class="review__content">
+                어떤 스테이지를 골라서 진행하느냐에 따라 다양한 환경에서 플레이가 가능합니다. 험난한 늪지대, 감옥이 줄줄이 늘어선 으슥한 장소, 사막과 같은 황량함이 느껴지는 광산 등 이후 나온 후속작 시리즈에 비해선 여러 환경을 느낄 수 있다는 것이 장점인 것 같았습니다.
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__title-wrap">
+                <div class="review__user">
+                  <img src="assets/img/pages/game/avatar_4.png" alt="유저 아바타">
+                  <div class="user__name-date">
+                    <div class="user-name">Ethan_Walker</div>
+                    <div class="user-date">2025.11.15</div>
+                  </div>
+                </div>
+                <div class="user-star">
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                </div>
+              </div>
+              <div class="review__content">
+                그래픽과 사운드의 완성도가 높아 몰입감이 뛰어났고, 조작도 직관적이라 처음부터 부담 없이 즐길 수 있습니다. 스토리 전개는 차분하지만 긴장감을 유지해 주며, 플레이할수록 세계관에 자연스럽게 빠져드는 게 이 시리즈의 매력인 거 같습니다. 처음 해보시는 거라면 전 시리즈 다 해보시는 걸 추천합니다.
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__title-wrap">
+                <div class="review__user">
+                  <img src="assets/img/pages/game/avatar_5.png" alt="유저 아바타">
+                  <div class="user__name-date">
+                    <div class="user-name">Lucas_Bennett</div>
+                    <div class="user-date">2025.11.02</div>
+                  </div>
+                </div>
+                <div class="user-star">
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-half icon--medium"></i>
+                </div>
+              </div>
+              <div class="review__content">
+                전투와 탐험의 균형이 잘 잡혀 있어 지루할 틈이 없었다. 디테일한 연출과 세심한 UI 덕분에 플레이 경험이 매끄럽고, 짧은 플레이 시간에도 확실한 만족감을 느낄 수 있는 게임이다. 마지막 엔딩 때문에 이 게임을 3번은 더 플레이해볼 거 같다.
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__title-wrap">
+                <div class="review__user">
+                  <img src="assets/img/pages/game/avatar_6.png" alt="유저 아바타">
+                  <div class="user__name-date">
+                    <div class="user-name">Oliver_Grant</div>
+                    <div class="user-date">2025.10.23</div>
+                  </div>
+                </div>
+                <div class="user-star">
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-fill icon--medium"></i>
+                  <i class="bi bi-star-half icon--medium"></i>
+                </div>
+              </div>
+              <div class="review__content">
+                전체적인 완성도와 몰입도가 높아서 한 번 시작하면 쉽게 멈출 수 없었다. 캐릭터 움직임과 환경 표현이 자연스럽고, 반복 플레이에서도 새롭게 느껴지는 요소들이 많아 꾸준히 즐기기 좋았다. 이전, 다음 시리즈들과 이어지는 이스터 에그도 플레이 중 소소한 재미를 준다.
+              </div>
+            </div>
+          </div>
+
+          <div class="page-button">
+            <div class="page-button-center">
+              <button class="btn btn--large btn--solid-blue" id="moreReviewBtn"><span>더보기</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- footer include -->
+    <footer class="footer--blue" id="footer"></footer>
+  </div>  <!-- body__inner -->
+
+
+  <!--===== 태블릿 & 모바일 햄버거 메뉴 include =====-->
+  <div class="mobile-menu" id="mobileMenu"></div>
+
+
+  <script src="js/common/import.js"></script>
+</body>
+</html>

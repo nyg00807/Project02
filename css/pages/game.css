@@ -1,0 +1,1153 @@
+#gameBody{
+  background-color: var(--black-600);
+}
+#gameBody .main{
+  color: var(--white-100);
+}
+#gameMainSec, #mediaGallSec, #mustPlaySec{
+  padding: 0;
+}
+:where(#gameMainSec, #mediaGallSec, #characterSec, #mustPlaySec) .inner{
+  width: 100%;
+  margin: 0;
+}
+
+
+/* ===== section: 게임 메인 비디오와 정보 ===== */
+#gameMainSec{
+  height: 100vh;
+}
+#gameMainSec .inner{
+  position: relative;
+}
+#gameMainVideo{
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main-info-wrap{
+  width: 100%;
+  height: 360px;
+  max-height: 33.333%;
+  padding: 0 calc((100% - 1600px)/2);
+  background: linear-gradient(rgba(18, 18, 18, 0), rgba(18, 18, 18, 1));
+  margin-bottom: -1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#gameMainLogo{
+  max-width: var(--column-5);
+  max-height: 200px;
+  margin-bottom: var(--basic-gap);
+}
+.main-info__price-star{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+.price{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.price__before s{
+  margin-right: 16px;
+  font-size: 32px;
+  color: var(--black-200);
+}
+.discount{
+  padding: 4px 6px;
+  background-color: var(--blue-500);
+  border-radius: var(--border-radius-6);
+  font-size: 24px;
+  font-weight: 800;
+}
+.price__after{
+  font-size: 64px;
+  font-weight: 800;
+}
+.main-info__star-gotoreview{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.main-info__star-gotoreview span, .main-info__star-wrap{
+  color: var(--yellow-400);
+}
+.main-info__star-wrap{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.go-to-review{
+  padding: 6px 12px;
+  border: 2px solid var(--white-100);
+  border-radius: var(--border-radius-20);
+  white-space: nowrap;
+}
+
+
+
+/* ===== section: 미디어 갤러리와 유튜브 영상 ===== */
+.media-gallery{
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  transition: background-image var(--transition-025) ease;
+}
+.media-gallery__content{
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.media-gallery__content > :where(h1, #mediaGallSwiper){
+  padding: 0 calc((100% - 1600px) / 2);
+}
+.media-gallery__content h1{
+  text-shadow: 0 0 16px rgba(18,18,18,0.75);
+}
+#mediaGallSwiper{
+  width: 100%;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+#mediaGallSwiper .swiper-wrapper{
+  width: var(--column-9);
+  aspect-ratio: 16 / 9;
+  border-radius: calc(2 * var(--border-radius-24));
+  box-shadow: 0 0 20px rgba(18,18,18,0.75);
+  overflow: hidden;
+}
+#mediaGallSwiper .swiper-slide img{
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#mediaGallSwiper .swiper-pagination{
+  width: var(--column-3);
+  position: static;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+#mediaGallSwiper .swiper-pagination::before{
+  display: block;
+  content: '';
+  width: 2px;
+  height: 98%;
+  background-color: var(--white-100);
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
+}
+#mediaGallSwiper .swiper-pagination-bullet{
+  width: 100%;
+  height: unset;
+  background-color: unset;
+  border-radius: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  transition-duration: var(--transition-025);
+  cursor: pointer;
+}
+#mediaGallSwiper .real-bullet{
+  width: 16px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--white-100);
+  border-radius: 50%;
+  margin-right: var(--basic-gap);
+  position: relative;
+  transition-duration: inherit;
+}
+#mediaGallSwiper .real-bullet::after{
+  display: block;
+  content: '';
+  width: 12px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--blue-500);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition-duration: inherit;
+}
+#mediaGallSwiper .bullet-text{
+  font-size: 18px;
+  text-align: left;
+  opacity: 0.5;
+  transition-duration: inherit;
+}
+#mediaGallSwiper .bullet-text + .bi{
+  margin-left: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: inherit;
+}
+@media (hover: hover) and (pointer: fine){
+  #mediaGallSwiper .swiper-pagination-bullet:hover .real-bullet{
+    background-color: var(--blue-500);
+  }
+  #mediaGallSwiper .swiper-pagination-bullet:hover .bullet-text{
+    opacity: 1;
+  }
+}
+#mediaGallSwiper .swiper-pagination-bullet-active{
+  transform: translateX(-4px);
+}
+#mediaGallSwiper .swiper-pagination-bullet-active .real-bullet{
+  width: 24px;
+  background-color: rgba(255,255,255,0.5);
+
+}
+#mediaGallSwiper .swiper-pagination-bullet-active .real-bullet::after{
+  opacity: 1;
+}
+#mediaGallSwiper .swiper-pagination-bullet-active .bullet-text{
+  font-size: 24px;
+  font-weight: 800;
+  opacity: 1;
+}
+#mediaGallSwiper .swiper-pagination-bullet-active .bullet-text + .bi{
+  opacity: 1;
+  visibility: visible;
+}
+.iframe-wrap--4, .iframe-wrap--6{
+  padding: 0 calc((100% - 1600px)/2);
+  margin: 132px 0;
+  display: grid;
+  gap: var(--basic-gap);
+}
+.iframe-wrap--4{
+  grid: auto / repeat(4, 1fr);
+}
+.iframe-wrap--6{
+  grid: auto auto / repeat(3, 1fr);
+}
+:where(.iframe-wrap--4, .iframe-wrap--6) iframe{
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  border-radius: var(--border-radius-24);
+}
+.media-data--mo{
+  display: none;
+}
+
+
+
+/* ===== section: 캐릭터 소개 ===== */
+#characterSec h1{
+  text-align: center;
+}
+/* 세로형 캐릭터 소개 */
+.cr-vertical-swiper{
+  height: calc(2*40px + 2*48px + 0.4*(2*var(--column-4) + var(--column-6)));
+  padding: 40px calc((100% - 1600px) / 2);
+}
+.cr-vertical-swiper .swiper-wrapper {
+  height: 100%;
+}
+.cr-vertical-swiper .swiper-slide{
+  display: flex;
+  align-items: center;
+  gap: var(--basic-gap);
+}
+.cr-vertical-swiper .swiper-slide > img{
+  width: var(--column-4);
+  aspect-ratio: 5 / 2;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--border-radius-24);
+  filter: grayscale(1);
+  transition-duration: var(--transition-025);
+}
+.cr-vertical-swiper .swiper-slide-active > img{
+  width: var(--column-6);
+  box-shadow: 0 0 20px rgba(255,255,255,0.25);
+  filter: grayscale(0);
+}
+.cr-vertical-swiper .cr-info-wrap{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.cr-vertical-swiper .swiper-slide-active .cr-info-wrap{
+  display: flex;
+}
+.cr__name{
+  font-family: 'heading';
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 150%;
+  text-align: center;
+  color: var(--blue-500);
+}
+.cr__line-wrap{
+  margin: 32px 0 72px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cr__line-wrap img{
+  width: 36px;
+  opacity: 0.5;
+}
+.cr__line-wrap img:first-child{
+  margin-bottom: auto;
+}
+.cr__line-wrap img:last-child{
+  margin-top: auto;
+}
+.line{
+  max-width: var(--column-4);
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+}
+.cr__desc{
+  max-width: var(--column-5);
+  font-size: 18px;
+  text-align: center;
+  color: var(--black-300);
+}
+.cr-vertical-swiper :is(.swiper-button-prev, .swiper-button-next){
+  width: 64px;
+  height: 64px;
+  color: rgba(255, 255, 255, 0.5);
+  left: 75%;
+  transform: translateX(-100%);
+}
+.cr-vertical-swiper .swiper-button-prev{
+  top: 80px;
+}
+.cr-vertical-swiper .swiper-button-next{
+  bottom: 80px;
+}
+
+/* 가로형 캐릭터 소개 */
+.cr-horizontal-swiper{
+  padding: 40px calc((100% - 1600px)/2);
+  overflow: hidden;
+}
+.cr-horizontal-swiper .swiper-wrapper{
+  align-items: stretch;
+}
+.cr-horizontal-swiper .swiper-slide{
+  /* width: var(--column-4); */
+  aspect-ratio: 1 / 1;
+  border-radius: var(--border-radius-24);
+  overflow: hidden;
+  position: relative;
+}
+.cr-horizontal-swiper .swiper-slide > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.cr-horizontal-swiper .cr-info-wrap{
+  background-color: var(--white-100);
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: translateY(calc(-48px - 24px));
+  transition-duration: var(--transition-025);
+}
+.cr-horizontal-swiper .cr__name{
+  font-size: 32px;
+  transition-duration: inherit;
+}
+.cr-horizontal-swiper .cr__line-wrap{
+  margin: 16px 0;
+}
+.cr-horizontal-swiper .line{
+  max-width: unset;
+  color: var(--black-600);
+}
+.cr-horizontal-swiper .cr__desc{
+  color: var(--black-400);
+}
+@media (hover: hover) and (pointer: fine){
+  .cr-horizontal-swiper .swiper-slide:hover .cr-info-wrap{
+    height: 100%;
+    background-color: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    transform: translateY(-100%);
+  }
+  .cr-horizontal-swiper .swiper-slide:hover .cr__name{
+    font-size: 48px;
+  }
+}
+.cr-horizontal-swiper :where(.swiper-button-prev, .swiper-button-next){
+  width: 64px;
+  height: 64px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.cr-horizontal-swiper .swiper-button-prev{
+  left: calc((100% - 1600px) / 2 - 24px);
+  transform: translateX(-100%);
+}
+.cr-horizontal-swiper .swiper-button-next{
+  right: calc((100% - 1600px) / 2 + 24px);
+  transform: translateX(100%);
+}
+
+
+
+/* ===== section: 게임을 해야 하는 이유 ===== */
+#mustPlaySec h1{
+  text-align: center;
+  margin-bottom: 40px;
+}
+[class*="must-play0"]{
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition-duration: 0.5s;
+}
+.must-play01, .must-play01 video{
+  clip-path: circle(10% at 100% 100%);
+}
+.must-play02, .must-play02 video{
+  clip-path: circle(10% at 0 100%);
+}
+.must-play03, .must-play03 video{
+  clip-path: polygon(50% 0, 51% 0, 51% 100%, 50% 100%);
+}
+#mustPlaySec video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.must-play__overlay{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.must-play01 .must-play__overlay{
+  background: linear-gradient(to right, rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.5) 75%, rgba(18, 18, 18, 1) 100%);
+}
+.must-play02 .must-play__overlay{
+  background: linear-gradient(to right, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.5) 25%, rgba(18, 18, 18, 0) 100%);
+}
+.must-play03 .must-play__overlay{
+  background: linear-gradient(to right, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0) 25%, rgba(18, 18, 18, 0.5) 50%, rgba(18, 18, 18, 0) 75%, rgba(18, 18, 18, 1) 100%);
+}
+.must-play__txt-wrap{
+  width: var(--column-6);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition-delay: var(--transition-035);
+  transition-duration: var(--transition-035);
+}
+.must-play__title{
+  white-space: nowrap;
+}
+.must-play__desc{
+  font-size: 24px;
+  margin-top: var(--basic-gap);
+}
+.must-play01 .must-play__txt-wrap{
+  right: -100%;
+}
+.must-play02 .must-play__txt-wrap{
+  left: -100%;
+}
+.must-play03 .must-play__txt-wrap{
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+/* 애니메이션 활성화 */
+.must-play01.active, .must-play01.active video{
+  clip-path: circle(150% at 100% 100%);
+}
+.must-play02.active, .must-play02.active video{
+  clip-path: circle(150% at 0 100%);
+}
+.must-play03.active, .must-play03.active video{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+[class*="must-play0"].active .must-play__txt-wrap{
+  opacity: 1;
+}
+.must-play01.active .must-play__txt-wrap{
+  right: calc((100% - 1600px) / 2);
+}
+.must-play02.active .must-play__txt-wrap{
+  left: calc((100% - 1600px) / 2);
+}
+.must-play03.active .must-play__txt-wrap{
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* ===== section: 게임 리뷰 ===== */
+#reviewSec h1{
+  text-align: center;
+}
+.review-sec__scroe-wrap{
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--yellow-400);
+}
+.review-sec__scroe-wrap .score{
+  font-family: 'heading';
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 150%;
+}
+.review-sec__star-wrap{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.review-sec__scroe-wrap p{
+  margin-top: 16px;
+  color: var(--black-300);
+}
+.grade-wrap{
+  display: flex;
+  align-items: center;
+  gap: var(--basic-gap);
+}
+.grade{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.grade__count{
+  font-family: 'heading';
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--blue-400);
+}
+.grade__title{
+  font-size: 24px;
+  font-weight: 800;
+}
+.grade__desc{
+  font-size: 18px;
+  color: var(--black-300);
+}
+.review-wrap{
+  margin-top: 84px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--basic-gap);
+}
+.review{
+  width: var(--column-4);
+  aspect-ratio: 2 / 1;
+  padding: var(--basic-gap);
+  background-color: #1D2331;
+  border-radius: var(--border-radius-24);
+}
+.review:nth-child(4), .review:nth-child(5), .review:nth-child(6){
+  display: none;
+}
+.review__title-wrap{
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review__user{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.review__user img{
+  width: 48px;
+  border-radius: 50%;
+}
+.user-name{
+  font-size: 18px;
+  font-weight: 800;
+}
+.user-date{
+  color: var(--black-300);
+}
+.user-star{
+  color: var(--yellow-400);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+#reviewSec .page-button{
+  margin-top: 48px;
+}
+
+
+
+/* ========== Laptop Size Responsive ========== */
+@media all and (max-width: 1780px){
+  .main-info-wrap, .media-gallery__content > :where(h1, #mediaGallSwiper), .iframe-wrap--4, .iframe-wrap--6{
+    padding: 0 5%;
+  }
+  .cr-vertical-swiper, .cr-horizontal-swiper{
+    padding: 40px 5%;
+  }
+  .cr-horizontal-swiper .swiper-button-prev{
+    left: 0;
+    transform: translateX(0);
+  }
+  .cr-horizontal-swiper .swiper-button-next{
+    right: 0;
+    transform: translateX(0);
+  }
+  .must-play01.active .must-play__txt-wrap{
+    right: 5%;
+  }
+  .must-play02.active .must-play__txt-wrap{
+    left: 5%;
+  }
+}
+
+
+
+/* ========== Tab Size Responsive ========== */
+@media all and (max-width: 1024px){
+  /* ===== section: 게임 메인 비디오와 정보 ===== */
+  .main-info-wrap{
+    height: 25%;
+    max-height: 33.333%;
+    padding: 0 5%;
+  }
+  #gameMainLogo{
+    max-width: var(--column-3);
+    max-height: 180px;
+  }
+  .main-info__price-star{
+    gap: var(--basic-gap);
+  }
+  .price__before s{
+    font-size: 24px;
+  }
+  .discount{
+    font-size: 20px;
+  }
+  .price__after{
+    font-size: 48px;
+  }
+  .main-info__star-wrap{
+    gap: 6px;
+  }
+  #gameStarPoint{
+    font-size: 20px;
+  }
+  .main-info__star-wrap .bi{
+    width: 24px;
+    font-size: 24px;
+  }
+
+
+
+  /* ===== section: 미디어 갤러리와 유튜브 영상 ===== */
+  #mediaGallSwiper{
+    padding-top: 32px;
+  }
+  #mediaGallSwiper .swiper-wrapper{
+    width: var(--column-4);
+  }
+  #mediaGallSwiper .swiper-pagination{
+    width: var(--column-2);
+  }
+  #mediaGallSwiper .bullet-text{
+    font-size: 16px;
+  }
+  #mediaGallSwiper .swiper-pagination-bullet-active .bullet-text{
+    font-size: 20px;
+  }
+  .iframe-wrap--4{
+    grid: auto auto / repeat(2, 1fr);
+  }
+  .iframe-wrap--6{
+    grid: repeat(3, auto) / repeat(2, 1fr);
+  }
+
+
+
+  /* ===== section: 캐릭터 소개 ===== */
+  /* 세로형 캐릭터 소개 */
+  .cr-vertical-swiper{
+    height: 720px;
+    padding: 32px 5%;
+  }
+  .cr-vertical-swiper .swiper-slide{
+    height: calc(0.4*var(--column-3));
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cr-vertical-swiper .swiper-slide > img{
+    width: var(--column-3);
+  }
+  .cr-vertical-swiper .swiper-slide-active > img{
+    width: var(--column-4);
+  }
+  .cr-vertical-swiper .cr-info-wrap{
+    width: var(--column-5);
+  }
+  .cr__name{
+    font-size: 32px;
+  }
+  .cr__line-wrap{
+    margin: 20px 0 32px 0;
+    justify-content: center;
+    gap: 12px;
+  }
+  .cr__line-wrap img{
+    width: 24px;
+  }
+  .line{
+    font-size: 18px;
+  }
+  .cr__desc{
+    font-size: 16px;
+  }
+  .cr-vertical-swiper :is(.swiper-button-prev, .swiper-button-next){
+    width: 48px;
+    height: 48px;
+    left: 50%;
+    transform: translateX(0);
+  }
+  .cr-vertical-swiper .swiper-button-prev{
+    top: 60px;
+  }
+  .cr-vertical-swiper .swiper-button-next{
+    bottom: 60px;
+  }
+
+  /* 가로형 캐릭터 소개 */
+  .cr-horizontal-swiper{
+    padding: 32px 5%;
+  }
+  .cr-horizontal-swiper .cr-info-wrap{
+    padding: 12px 20px;
+    transform: translateY(calc(-30px - 24px));
+  }
+  .cr-horizontal-swiper .cr__name{
+    font-size: 20px;
+  }
+  .cr-horizontal-swiper .line{
+    max-width: unset;
+    color: var(--black-600);
+  }
+  .cr-horizontal-swiper .cr__desc{
+    max-width: 100%;
+  }
+  .cr-horizontal-swiper .swiper-slide.active .cr-info-wrap{
+    height: 100%;
+    background-color: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    transform: translateY(-100%);
+  }
+  .cr-horizontal-swiper .swiper-slide.active .cr__name{
+    font-size: 32px;
+  }
+  .cr-horizontal-swiper :where(.swiper-button-prev, .swiper-button-next){
+    max-width: 5%;
+    width: 40px;
+    height: unset;
+    aspect-ratio: 1 / 1;
+  }
+
+
+
+  /* ===== section: 게임을 해야 하는 이유 ===== */
+  .must-play01 .must-play__overlay{
+    background: linear-gradient(to right, rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.5) 50%, rgba(18, 18, 18, 0.75) 100%);
+  }
+  .must-play02 .must-play__overlay{
+    background: linear-gradient(to right, rgba(18, 18, 18, 0.75) 0%, rgba(18, 18, 18, 0.5) 50%, rgba(18, 18, 18, 0) 100%);
+  }
+  .must-play03 .must-play__overlay{
+    background: linear-gradient(to right, rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.5) 50%, rgba(18, 18, 18, 0) 100%);
+  }
+  .must-play__txt-wrap{
+    width: var(--column-4);
+    max-width: var(--column-6);
+  }
+  .must-play__desc{
+    font-size: 20px;
+  }
+
+
+  /* ===== section: 게임 리뷰 ===== */
+  .review-sec__scroe-wrap p{
+    font-size: 18px;
+  }
+  .grade__count{
+    font-size: 48px;
+  }
+  .grade__title{
+    font-size: 18px;
+  }
+  .grade__desc{
+    font-size: 16px;
+  }
+  .review-wrap{
+    margin-top: 72px;
+  }
+  .review{
+    width: var(--column-3);
+  }
+  .review:nth-child(3), .review:nth-child(4), .review:nth-child(5), .review:nth-child(6){
+    display: none;
+  }
+  .review__title-wrap{
+    margin-bottom: 12px;
+  }
+  .review__user img{
+    width: 40px;
+  }
+  .user-name{
+    font-size: 16px;
+  }
+  .user-date{
+    font-size: 14px;
+  }
+  .user-star{
+    gap: 6px;
+  }
+  .user-star .bi{
+    width: 20px;
+    font-size: 20px;
+  }
+  #reviewSec .page-button{
+    margin-top: 48px;
+  }
+}
+/* 세로 모드일 때  */
+@media all and (max-width: 1024px) and (orientation: portrait){
+  #mediaGallSwiper .swiper-slide{
+    width: var(--column-4);
+    aspect-ratio: 3 / 4;
+  }
+}
+
+
+/* ========== Mobile Size Responsive ========== */
+@media all and (max-width: 768px){
+  /* ===== section: 게임 메인 비디오와 정보 ===== */
+  #gameMainVideo{
+    height: unset;
+    aspect-ratio: 1 / 1.08;
+  }
+  .main-info-wrap{
+    height: fit-content;
+    max-height: unset;
+    min-height: 35%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background: linear-gradient(rgb(18 18 18 / 0%), rgba(18, 18, 18, 1) 25%);
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  #gameMainLogo{
+    margin-bottom: 6px;
+  }
+  #gameMainDev{
+    font-size: 12px;
+  }
+  .main-info__price-star{
+    align-items: flex-start;
+  }
+  .price{
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .price__after{
+    font-size: 24px;
+  }
+  .price__before s{
+    font-size: 14px;
+    margin: 0 var(--basic-gap);
+  }
+  .discount{
+    font-size: 14px;
+  }
+  #gameStarPoint{
+    font-size: 16px;
+  }
+  .main-info__star-wrap{
+    gap: 4px;
+  }
+  :where(.main-info__star-wrap, .go-to-review) .bi{
+    width: 16px;
+    font-size: 16px;
+  }
+
+
+  /* ===== section: 미디어 갤러리와 유튜브 영상 ===== */
+  .media-gallery__content h1{
+    font-size: 32px;
+    text-align: center;
+  }
+  #mediaGallSwiper{
+    padding-top: 24px;
+    flex-direction: column;
+  }
+  #mediaGallSwiper .swiper-wrapper{
+    aspect-ratio: 5 / 3;
+    border-radius: var(--border-radius-16);
+    margin: 16px 0 24px 0;
+  }
+  #mediaGallSwiper .swiper-pagination{
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  #mediaGallSwiper .swiper-pagination::before{
+    display: none;
+  }
+  #mediaGallSwiper .swiper-pagination-bullet{
+    display: block;
+    width: fit-content;
+  }
+  #mediaGallSwiper .swiper-pagination-bullet-active{
+    transform: translateX(0);
+  }
+  #mediaGallSwiper .real-bullet{
+    display: block;
+    width: 12px;
+    margin: 0;
+  }
+  #mediaGallSwiper .real-bullet::after{
+    width: 8px;
+  }
+  #mediaGallSwiper .swiper-pagination-bullet-active .real-bullet{
+    width: 16px;
+  }
+  #mediaGallSwiper :where(.bullet-text, .bullet-text + .bi){
+    display: none;
+  }
+  .iframe-wrap--4, .iframe-wrap--6{
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  :where(.iframe-wrap--4, .iframe-wrap--6) iframe{
+    border-radius: var(--border-radius-16);
+  }
+  .media-data--mo{
+    display: block;
+  }
+
+
+  /* ===== section: 캐릭터 소개 ===== */
+  #characterSec h1{
+    font-size: 32px;
+  }
+
+  /* 세로형 캐릭터 소개 */
+  .cr-vertical-swiper{
+    height: 450px;
+    padding: 24px 5%;
+  }
+  .cr-vertical-swiper .swiper-slide{
+  gap: 36px; 
+  }
+  .cr-vertical-swiper .swiper-slide-active > img{
+    border-radius: var(--border-radius-16);
+  }
+  .cr__name{
+    font-size: 24px;
+  }
+  .cr__line-wrap{
+    margin: var(--basic-gap);
+  }
+  .line{
+    font-size: 14px;
+  }
+  .cr__desc{
+    font-size: 12px;
+  }
+
+  /* 가로형 캐릭터 소개 */
+  .cr-horizontal-swiper{
+    padding: 24px 5%;
+  }
+  .cr-horizontal-swiper .swiper-slide{
+    border-radius: var(--border-radius-16);
+  }
+  .cr-horizontal-swiper .cr-info-wrap{
+    padding: 6px 12px;
+    transform: translateY(calc(-12px - 24px));
+  }
+  .cr-horizontal-swiper .cr__name{
+    font-size: 16px;
+  }
+  .cr-horizontal-swiper .cr__line-wrap{
+    margin: var(--basic-gap) 0;
+    gap: 6px;
+  }
+  .cr__line-wrap img{
+    width: 16px;
+  }
+  .cr-horizontal-swiper .swiper-slide.active .cr__name{
+    font-size: 20px;
+  }
+
+  /* 캐릭터 소개 슬라이드 페이지네이션 */
+  :is(.cr-vertical-swiper, .cr-horizontal-swiper) .swiper-pagination{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    top: 100%;
+    transform: translate3d(0, -100%, 0);
+  }
+  :is(.cr-vertical-swiper, .cr-horizontal-swiper) .swiper-pagination-bullet{
+    width: 36px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0;
+    margin: 0 !important;
+    opacity: 1;
+  }
+  :is(.cr-vertical-swiper, .cr-horizontal-swiper) .swiper-pagination-bullet-active{
+    background-color: var(--blue-500);
+  }
+  
+
+  /* ===== section: 게임을 해야 하는 이유 ===== */
+  #mustPlaySec{
+    padding: 60px 0;
+  }
+  #mustPlaySec h1{
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  [class*="must-play0"] .must-play__overlay{
+    background: var(--black-600);
+    opacity: 0.35;
+  }
+  .must-play__txt-wrap{
+    max-width: 90%;
+  }
+  .must-play__title{
+    font-size: 24px;
+    white-space: normal;
+  }
+  .must-play__desc{
+    font-size: 16px;
+  }
+
+
+
+  /* ===== section: 게임 리뷰 ===== */
+  #reviewSec h1{
+   font-size: 32px; 
+  }
+  .review-sec__scroe-wrap{
+    margin: 24px 0 36px 0;
+  }
+  .review-sec__scroe-wrap .score{
+    font-size: 64px;
+  }
+  .review-sec__star-wrap .bi{
+    width: 24px;
+    font-size: 24px;
+  }
+  .review-sec__scroe-wrap p{
+    font-size: 16px;
+    margin-top: 12px;
+  }
+  .grade-wrap{
+    flex-wrap: wrap;
+  }
+  .grade{
+    flex-basis: var(--column-2);
+    gap: 4px;
+  }
+  .grade__count{
+    font-size: 32px;
+  }
+  .grade__title{
+    font-size: 16px;
+  }
+  .grade__desc{
+    font-size: 14px;
+  }
+  .review-wrap{
+    margin-top: 48px;
+  }
+  .review{
+    width: 100%;
+    border-radius: var(--border-radius-16);
+  }
+  .review__user{
+    gap: 6px;
+  }
+  .review__user img{
+    width: 32px;
+  }
+  .user-name{
+    font-size: 14px;
+  }
+  .user-date{
+    font-size: 12px;
+  }
+  .user-star{
+    gap: 4px;
+  }
+  .user-star .bi{
+    width: 16px;
+    font-size: 16px;
+  }
+  .review__content{
+  font-size: 12px;
+  }
+}

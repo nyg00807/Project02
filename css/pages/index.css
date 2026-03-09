@@ -1,0 +1,2234 @@
+/* ========== section: 메인 비주얼 (#mainVisualSec) ========== */
+#mainVisualSec{
+  padding: 0;
+}
+#mainVisualSec .inner{
+  width: 100%;
+  margin: 0;
+}
+#mainSwiper .swiper-wrapper{
+  transform: translateZ(0);
+}
+#mainSwiper .swiper-slide{
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#mainSwiper video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+#mainSwiper .swiper-slide::before{
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)60%)
+}
+/* 좌우 버튼 */
+#mainSwiper :where(.swiper-button-next, .swiper-button-prev){
+  width: 40px;
+  height: 90px;
+  background: url('../../assets/img/pages/index/main_arrow.svg') no-repeat;
+  background-size: contain;
+  padding: 0 80px;
+  position: absolute;
+  top: 50%;
+  z-index: 5;            
+  cursor: pointer;
+}
+#mainSwiper .swiper-button-next{
+  transform: translateY(-50%);
+  right: 0;
+}
+#mainSwiper .swiper-button-prev{
+  transform: translateY(-50%) rotate(180deg);
+  left: 0;
+}
+/* 페이지네이션 */
+#mainSwiper .swiper-pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+#mainSwiper .swiper-pagination-bullet{
+  width: 80px;
+  height: 6px;
+  border-radius: 0px;
+  margin-bottom: 96px;
+  background: rgba(255, 255, 255, 0.6);
+}
+#mainSwiper .swiper-pagination-bullet-active{
+  background: var(--blue-500);
+}
+
+
+
+/* ========== section: PS 기기 애니메이션 (#consoleSec) ========== */
+#consoleSec{
+  background-color: var(--black-600);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.console__content{
+  width: 760px;
+  height: 710px;
+  margin: auto;
+  margin-bottom: 80px;
+  position: relative;
+  --circle-scale: 0;
+}
+.console__content::before{
+  width: 800px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--blue-500);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%) scale(var(--circle-scale));
+  content: '';
+}
+.console__content__title{
+  font-size: 80px;
+  color: var(--white-100);
+  position: relative;
+  z-index: 1;
+}
+.console__content__visual{
+  width: 653px;
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  z-index: 1;
+}
+
+
+
+/* ========== section: 듀얼센스 애니메이션 (#controllerSec) ========== */
+#controllerSec{
+  margin: -1px;
+  background-color: var(--black-600);
+  position: relative;
+  overflow: hidden;
+}
+.controller__bgLayer{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+    width: 80%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--blue-500);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -35%;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+.controller__content__bgItem1{
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  animation: controllerAni 5s infinite linear;
+}
+.controller__content__bgItem2{
+  width: 450px;
+  display: block;
+  aspect-ratio: 1 / 1;
+  border: 15px solid var(--blue-500);
+  position: absolute;
+  top: -225px;
+  right: 0;
+  animation: controllerAni 10s infinite linear;
+  z-index: 0;
+}
+
+@keyframes controllerAni{
+  0%{ transform: rotate(0deg); }
+  100%{ transform: rotate(360deg); }
+}
+
+#controllerSec  .page-button{
+  z-index: 1;
+}
+.controller{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.controller__title{
+  color: var(--white-100);
+}
+.controller__title .mo__br {
+  display: none;
+}
+.controller__content{
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.controller__content__visual{
+  width: 750px;
+  margin-top: -20px;
+}
+.controller__content__visual img{
+  width: 100%;
+  object-fit: cover;
+}
+.controller__content__info__wrap{
+  width: 700px;
+  aspect-ratio: 8 / 5;
+  position: relative;
+}
+.controller__content__info{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.controller__content__info img{
+  width: 100%;
+  height: 100%;
+}
+.content__info__bg{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../assets/img/pages/index/intro_frame.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+.content__info__text-box{
+  width: 75%;
+  color: var(--white-100);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  z-index: 3;
+}
+.gif__text{
+  width: 240px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+.content__info__video{
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  z-index: 1;
+  clip-path: polygon(
+    4% 0%, 96% 0%, 100% 6%, 100% 30%, 96% 36%, 96% 64%, 100% 70%, 100% 94%, 
+    96% 100%, 4% 100%, 0% 94%, 0% 70%, 4% 64%, 4% 36%, 0% 30%, 0% 6%
+  );
+}
+.content__info__video::before{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.4);
+  display: block;
+  position: absolute;
+  content: '';
+}
+.content__info__video video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+
+/* ========== section: 헤드셋 애니메이션 (#audioSec) ========== */
+#audioSec{
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.audio{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--black-600);
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: circle(50% at 50% 50%);
+}
+.audio__content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.audio__text-box{
+  width: 40%;
+}
+.audio__title{
+  color: var(--white-100);
+}
+.audio__text-box .text--l{
+  width: 80%;
+  color: var(--white-100);
+}
+.audio__visual{
+  width: 600px;
+  height: 750px;
+}
+.audio__visual img{
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+/* ========== section: PlayStation 장점 (#psBenefitSec) ========== */
+#psBenefitSec .inner{
+  width: 100%;
+  margin: 0;
+}
+#psBenefitSec h2{
+  text-align: center;
+  margin: 0 auto 40px auto;
+}
+#psBenefitSec h2 br{
+  display: none;
+}
+.benefit__content{
+  aspect-ratio: 1 / 0.32;
+  position: relative;
+}
+.benefit__video, .benefit__overlay, .benefit__item-wrap{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.benefit__video{
+  object-fit: cover;
+}
+.benefit__overlay{
+  background-color: rgba(18,18,18,0.65);
+}
+.benefit__item-wrap .swiper-wrapper{
+  color: var(--white-100);
+  display: flex;
+}
+.benefit{
+  flex: 1;
+  padding: var(--basic-gap);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--basic-gap);
+  cursor: pointer;
+}
+.benefit:not(:last-child){
+  border-right: 1px solid var(--white-100);
+}
+.benefit__play{
+  width: 72px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--white-100);
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition-duration: var(--transition-025);
+  cursor: pointer;
+}
+.benefit__play.active{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.benefit__play img{
+  width: 40px;
+  margin: 0 auto;
+  transform: rotate(180deg);
+}
+@media (hover: hover) and (pointer: fine){
+  .benefit:hover .benefit__play{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+/* ========== section: 게임 cd 전시 (#gameCDSec) ========== */
+#gameCDSec .inner{
+  width: 100%;
+  margin: 0;
+}
+/* 배너 */
+#bannerSwiper{
+  width: 1600px;
+  margin: auto;
+  margin-bottom: 160px;
+}
+#bannerSwiper .swiper-wrapper{
+  gap: 0;
+}
+#bannerSwiper .swiper-slide{
+  height: 188px;
+  position: relative;
+}
+#bannerSwiper .swiper-slide::after{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: '';
+  inset: 0;
+  background: none;
+  z-index: 0;
+}
+#bannerSwiper .swiper-slide:not(.banner04)::after{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: '';
+  inset: 0;
+  background: linear-gradient(to right,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0));
+  z-index: 0;
+}
+#bannerSwiper .swiper-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#bannerSwiper .banner01 img{
+  object-position: center 20% ;
+}
+#bannerSwiper .banner02 img{
+  object-position: bottom;
+}
+#bannerSwiper .banner03 img{
+  object-position: center 30% ;
+}
+#bannerSwiper .banner04 img{
+  object-position: center 30% ;
+}
+.banner-Swiper__content{
+  color: var(--white-100);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 0 160px;
+  z-index: 5;
+}
+.banner-Swiper__desc{
+  padding-top: 4px;
+}
+#bannerSwiper .br-t{
+  display: none;
+}
+#bannerSwiper .br-m{
+  display: none;
+}
+#bannerSwiper .banner04 .banner-Swiper__content {
+  color: var(--black-600);
+ }
+ #bannerSwiper .swiper-button-next, 
+ #bannerSwiper .swiper-button-prev{
+  width: 50px;
+  height: 50px;
+  background: url('../../assets/img/pages/index/banner_tri.svg') no-repeat;
+  background-size: contain;
+  margin: 0 30px;
+  position: absolute;
+  top: 50%;
+  z-index: 5; 
+  cursor: pointer;
+}
+#bannerSwiper .swiper-button-next{
+  transform: translateY(-50%) rotate(180deg);
+  right: 0;
+}
+#bannerSwiper .swiper-button-prev{
+  transform: translateY(-50%);
+  left: 0;
+}
+#bannerSwiper :where(.swiper-button-next, .swiper-button-prev) .swiper-navigation-icon{
+  display: none;
+}
+
+/* 게임 CD 전시 */
+#gameCDSec [class*="tab-wrap"]{
+  margin: 0 auto 64px auto;
+}
+.gameCD__display-top, .gameCD__display-bottom{
+  /* padding: 86px 0; */
+  overflow: hidden;
+  position: relative;
+}
+.gameCD__display-top{
+  padding: 86px 0 42px 0;
+}
+.gameCD__display-bottom{
+  padding: 42px 0 86px 0;
+}
+:where(.gameCD__display-top, .gameCD__display-bottom)::before{
+  display: block;
+  content: '';
+  width: 100%;
+  height: 360px;
+  position: absolute;
+  left: 0;
+}
+.gameCD__display-top::before{
+  background-color: var(--blue-500);
+  top: 0;
+}
+.gameCD__display-bottom::before{
+  background-color: var(--purple-600);
+  bottom: 0;
+}
+:where(.gameCD__display-top, .gameCD__display-bottom)::after{
+  display: block;
+  content: 'PlayStation';
+  font-family: 'heading';
+  font-size: 200px;
+  font-weight: 800;
+  color: var(--white-100);
+  line-height: 1;
+  position: absolute;
+}
+.gameCD__display-top::after{
+  top: 0;
+  left: 0;
+}
+.gameCD__display-bottom::after{
+  bottom: 0;
+  right: 0;
+}
+.gameCD-top-swiper, .gameCD-bottom-swiper{
+  width: 1600px;
+  overflow: visible;
+}
+:where(.gameCD-top-swiper, .gameCD-bottom-swiper) .swiper-wrapper{
+  gap: var(--basic-gap);
+}
+:where(.gameCD-top-swiper, .gameCD-bottom-swiper) .swiper-slide{
+  width: calc((100% - 3 * var(--basic-gap)) / 4);
+  min-width: 382px;
+  aspect-ratio: 1.15 / 1;
+  background-color: var(--black-500);
+  box-shadow: 0 0 12px rgba(0,0,0,0.8);
+  position: relative;
+  transition-duration: var(--transition-025);
+  cursor: pointer;
+}
+:where(.gameCD-top-swiper, .gameCD-bottom-swiper) .swiper-slide::before{
+  display: block;
+  content: '';
+  width: 28px;
+  height: 100%;
+  background-color: rgba(18,18,18,0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.swiper-slide > [class*="game-cd--"]{
+  width: calc(100% - 28px);
+  height: 100%;
+  margin-left: auto;
+}
+.game-cd__content{
+  width: 100%;
+  height: 100%;
+  padding: 12px 0;
+  position: relative;
+}
+.game-cd__disc{
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 1px solid var(--white-100);
+  box-shadow: 0 0 12px #0070F3;
+  overflow: hidden;
+  position: relative;
+}
+.game-cd__disc > img{
+  width: 100%;
+  object-fit: cover;
+}
+.disc__center{
+  width: 86px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--black-300);
+  border-radius: 50%;
+  border: 2px solid var(--white-100);
+  box-shadow: inset 0 0 16px #0070F3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+[class*="disc__shape"]{
+  width: 48px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.game-cd--blue [class*="disc__shape"]{
+  background-color: var(--blue-500);
+}
+.game-cd--cyan [class*="disc__shape"]{
+  background-color: var(--cyan-500);
+}
+.game-cd--purple [class*="disc__shape"]{
+  background-color: var(--purple-600);
+}
+.game-cd--red [class*="disc__shape"]{
+  background-color: var(--red-500);
+}
+[class*="disc__shape"]::after{
+  display: block;
+  content: '';
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.disc__shape--tri::after{
+  width: 70%;
+  background: url('../../assets/img/pages/index/cd_tri.svg') no-repeat center / 100%;
+}
+.disc__shape--circle::after{
+  width: 75%;
+  border-radius: 50%;
+  border: 4px solid var(--white-100);
+}
+.disc__shape--rect::after{
+  width: 58%;
+  border: 4px solid var(--white-100);
+}
+.disc__shape--x::after{
+  width: 62.5%;
+  background: url('../../assets/img/pages/index/cd_x.svg') no-repeat center / 100%;
+}
+.disc__ps5{
+  width: 100%;
+  height: 72px;
+  background-color: var(--black-300);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.disc__ps5 img{
+  width: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.game-cd__info-wrap{
+  width: 130px;
+  height: 100%;
+  background-color: rgba(18,18,18,0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  text-align: right;
+}
+.game-cd--blue :where(.game-cd__name, .game-cd__price){
+  background-color: var(--blue-500);
+}
+.game-cd--blue .game-cd__dev{
+  background-color: var(--blue-200);
+  color: var(--blue-500);
+}
+.game-cd--blue .game-cd__price .original{
+  color: var(--blue-300);
+}
+.game-cd--cyan :where(.game-cd__name, .game-cd__price){
+  background-color: var(--cyan-500);
+}
+.game-cd--cyan .game-cd__dev{
+  background-color: var(--cyan-200);
+  color: var(--cyan-500);
+}
+.game-cd--cyan .game-cd__price .original{
+  color: var(--cyan-300);
+}
+.game-cd--purple :where(.game-cd__name, .game-cd__price){
+  background-color: var(--purple-600);
+}
+.game-cd--purple .game-cd__dev{
+  background-color: var(--purple-200);
+  color: var(--purple-500);
+}
+.game-cd--purple .game-cd__price .original{
+  color: var(--purple-400);
+}
+.game-cd--red :where(.game-cd__name, .game-cd__price){
+  background-color: var(--red-500);
+}
+.game-cd--red .game-cd__dev{
+  background-color: var(--red-200);
+  color: var(--red-500);
+}
+.game-cd--red .game-cd__price .original{
+  color: var(--red-300);
+}
+.game-cd__name{
+  width: 120%;
+  aspect-ratio: 1 / 0.4;
+  padding: 8px 6px 8px 12px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--white-100);
+  text-align: right;
+  margin-top: auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;  
+}
+.game-cd__name p{
+  width: 100%;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;   
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.game-cd__dev{
+  max-width: 100%;
+  padding: 2px 6px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.game-cd__star{
+  padding: 0 6px;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--yellow-400);
+}
+.game-cd__star .bi{
+  width: 20px;
+  aspect-ratio: 1 / 1;
+  font-size: 20px;
+  margin-right: 4px;
+  transform: translateY(-2px);
+}
+.game-cd__price{
+  width: 100%;
+  padding: 6px;
+  color: var(--white-100);
+}
+.game-cd__price .total{
+  font-size: 20px;
+  font-weight: 800;
+}
+.game-cd__price .original{
+  font-size: 12px;
+}
+.game-cd__discount{
+  margin-top: auto;
+  padding: 0 6px;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--yellow-400);
+  opacity: 0.8;
+}
+.game-cd-hover{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18,18,18,0.8);
+  color: var(--white-100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition-duration: inherit;
+}
+.game-cd-hover .bi{
+  color: var(--yellow-400);
+}
+@media (hover: hover) and (pointer: fine){
+  :where(.gameCD-top-swiper, .gameCD-bottom-swiper) .swiper-slide:hover{
+    transform: translateY(-24px);
+  }
+  :where(.gameCD-top-swiper, .gameCD-bottom-swiper) .swiper-slide:hover .game-cd-hover{
+    opacity: 1;
+  }
+}
+.gameCD__display-wrap{
+  display: none;
+}
+#gameCDSec [class*="tab-wrap"]:has(#gameCDTab1:checked) ~ #gameCDDisplay1,
+#gameCDSec [class*="tab-wrap"]:has(#gameCDTab2:checked) ~ #gameCDDisplay2,
+#gameCDSec [class*="tab-wrap"]:has(#gameCDTab3:checked) ~ #gameCDDisplay3{
+  display: block;
+}
+
+
+
+/* ========== section: 독점작 게임 (#exclusiveSec) ========== */
+#exclusiveSec .inner{
+  width: 100%;
+  margin: 0;
+}
+#exclusiveSec h1{
+  font-size: 100px;
+  word-break: keep-all;
+  margin-left: 48px;
+  margin-bottom: 24px;
+}
+.exclusive__content{
+  height: 100vh;
+}
+#exclusiveThumbSwiper{
+  height: 100%;
+}
+#exclusiveThumbSwiper .swiper-wrapper{
+  width: 120%;
+  margin-left: -10%; 
+}
+#exclusiveThumbSwiper .swiper-slide{
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  transform: skewX(-10deg);
+  transition: flex var(--transition-035) ease, transform var(--transition-025) ease;
+  cursor: pointer;
+}
+#exclusiveThumbSwiper .swiper-slide::before{
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  inset: -20%;  /* 빈공간 방지 */
+  transform: skewX(10deg);
+}
+#exclusiveThumbSwiper [data-exclusive="exclusive01"]::before, #exclusiveRowSwiper [data-exclusive="exclusive01"]{
+  background-image: url('../../assets/img/pages/index/exclusive_01.png');
+}
+#exclusiveThumbSwiper [data-exclusive="exclusive02"]::before, #exclusiveRowSwiper [data-exclusive="exclusive02"]{
+  background-image: url('../../assets/img/pages/index/exclusive_02.jpg');
+}
+#exclusiveThumbSwiper [data-exclusive="exclusive03"]::before, #exclusiveRowSwiper [data-exclusive="exclusive03"]{
+  background-image: url('../../assets/img/pages/index/exclusive_03.jpg');
+}
+#exclusiveThumbSwiper [data-exclusive="exclusive04"]::before, #exclusiveRowSwiper [data-exclusive="exclusive04"]{
+  background-image: url('../../assets/img/pages/index/exclusive_04.jpg');
+}
+#exclusiveThumbSwiper [data-exclusive="exclusive05"]::before, #exclusiveRowSwiper [data-exclusive="exclusive05"]{
+  background-image: url('../../assets/img/pages/index/exclusive_05.jpg');
+}
+#exclusiveThumbSwiper [data-exclusive="exclusive06"]::before, #exclusiveRowSwiper [data-exclusive="exclusive06"]{
+  background-image: url('../../assets/img/pages/index/exclusive_06.png');
+}
+#exclusiveThumbSwiper .swiper-slide::after{
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18,18,18,0.6);
+  backdrop-filter: grayscale(100%);
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-duration: inherit;
+}
+@media (hover: hover) and (pointer: fine){
+  #exclusiveThumbSwiper .swiper-slide:hover{
+    flex: 2;
+    transform: skewX(-10deg) scale(1.05);
+  }
+  #exclusiveThumbSwiper .swiper-wrapper:hover .swiper-slide:not(:hover){
+    flex: 1;
+  }
+  #exclusiveThumbSwiper .swiper-slide:hover::after{
+    opacity: 0;
+  }
+}
+#exclusiveRowSwiper{
+  display: none;
+}
+#exclusiveRowSwiper .swiper-slide{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+/* ========== section: 요금제 안내 (#psPlusSec) ========== */
+#psPlusSec{
+  background-color: var(--black-600);
+}
+.plus h2{
+  color: var(--white-100);
+  text-align: center;
+}
+#planSwiper .swiper-wrapper{
+  width: 100%;
+  gap: var(--basic-gap);
+  justify-content: center;
+}
+#planSwiper .swiper-slide{
+  width: 30%;
+  height: auto;
+}
+.content__card{
+  width: 100%;
+  margin-top: 260px;
+}
+.content__card__top{
+  height: 360px;
+  background-color: var(--blue-500);
+  border-radius: var(--border-radius-20);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+}
+.top__img{
+  width: 70%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.top__img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.top__text{
+  padding: 0 15px;
+  margin-top: 200px;
+  margin-bottom: 35px;
+  color: var(--white-100);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.top__arrow{
+  width: 60px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--white-100);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.top__arrow i{
+  font-size: 30px;
+  color: var(--blue-500);
+  animation: psPlusAni 1s infinite linear;
+}
+
+@keyframes psPlusAni{
+  0%{ transform: translateY(-5px); }
+  100%{ transform: translateY(5px); }
+}
+
+.content__card__bottom{
+  height: 0;
+    overflow: hidden;
+    opacity: 0;
+    z-index: 1;
+  background-color: #34415D;
+  border-radius: var(--border-radius-20);
+  margin-top: -30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease;
+}
+.bottom__text{
+  padding: 70px 20px 48px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.bottom__text__line{
+  color: var(--white-100);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.bottom__text__line p{
+  font-weight: 400;
+}
+.bottom__dot{
+  border: 1px dashed var(--black-300);
+  flex: 1;
+}
+.bottom__text__line i{
+  font-size: 24px;
+}
+.bottom__boxs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.bottom__boxs label{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.bottom__box{
+  width: 90%;
+  padding: 17px 12px;
+  background-color: #526181;
+  border-radius: var(--border-radius-20);
+  color: var(--white-100);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: var(--transition-035);
+}
+.bottom__boxs input{
+  appearance: none;
+  width: 30px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--white-100);
+  border: 3px solid #34415D;
+  border-radius: 50%;
+  position: relative;
+}
+.bottom__boxs input[type="radio"]:checked::before{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #34415D;
+}
+.box__text{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.box__text__top{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 3px;
+}
+.box__text__top .text--s{
+  color: var(--blue-200);
+}
+.wrap__bottom{
+  padding-bottom: 34px;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+.content__card__bottom .text--xs{
+  padding-left: 20px;
+  color: var(--blue-300);
+}
+@media (hover: hover) and (pointer: fine){
+  .bottom__box:hover{
+    background-color: #8191B2;
+  }
+}
+#planSwiper .swiper-pagination{
+  bottom: 0px;
+  display: none;
+}
+#planSwiper .swiper-pagination-bullet{
+  width: 60px;
+  height: 7px;
+  background-color: var(--white-100);
+  border-radius: 0;
+}
+#planSwiper .swiper-pagination-bullet-active {
+  width: 60px;
+  border-radius: 0;
+  background-color: var(--blue-500);
+}
+
+
+/* ========== section: 소식과 뉴스 (#mainNewsSec) ========== */
+#mainNewsSec{
+  padding-bottom: 0;
+}
+#mainNewsSec .inner{
+  width: 100%;
+  margin: 0;
+}
+/* 타이틀 */
+.mainNews__header-title{
+  text-align: center;
+  padding-bottom: 40px;
+}
+/* 본문 */
+.mainNews__grid{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 400px 400px;
+  grid-template-areas:
+  "n1 n2 n2 n3"
+  "n1 n4 n5 n5"
+}
+.mainNews__card{
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-035);
+}
+.newsCard01{
+  grid-area: n1;
+}
+.newsCard01 .mainNews__card-img::before{
+  background: #1E40AF80;
+}
+.newsCard02{
+  grid-area: n2;
+}
+.newsCard02 .mainNews__card-img::before{
+  background: #B91C1C80;
+}
+.newsCard03{
+  grid-area: n3;
+}
+.newsCard03 .mainNews__card-img::before{
+  background: #A1620780;
+}
+.newsCard04{
+  grid-area: n4;
+}
+.newsCard04 .mainNews__card-img::before{
+  background: #6D28D980;
+}
+.newsCard05{
+  grid-area: n5;
+}
+.newsCard05 .mainNews__card-img::before{
+  background: #15803D80;
+}
+.mainNews__card-img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: var(--transition-035);
+}
+/* 호버 색상 변화 */
+.mainNews__card-img::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateY(100%);
+  transition: var(--transition-025);
+  z-index: 2;
+}
+@media (hover: hover) and (pointer: fine){
+  .mainNews__card:hover .mainNews__card-img::before{
+    transform: translateY(0);
+  }
+}
+.mainNews__card.active .mainNews__card-img::before {
+  transform: translateY(0);
+}
+/* 검정 오버레이 */
+.mainNews__card-img::before,
+.mainNews__card-img::after{
+  pointer-events: none;
+}
+.mainNews__card-img::after{
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0),rgb(0, 0, 0));
+}
+@media (hover: hover) and (pointer: fine){
+  .mainNews__card:hover .mainNews__card-img::after{
+    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.6));
+  }
+}
+.mainNews__card.active .mainNews__card-img::after {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+}
+.mainNews__card-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mainNews__card-content{
+  padding: 32px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--white-100);
+  z-index: 10;
+  transform: translateY(0);
+  transition: var(--transition-035);
+}
+@media (hover: hover) and (pointer: fine){
+  .mainNews__card:hover .mainNews__card-title{
+    display: block;       
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    overflow: visible;  
+  }
+}
+.mainNews__card.active .mainNews__card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.newsCard01 .mainNews__card-title{
+  max-width: 300px;
+}
+.newsCard02 .mainNews__card-title{
+  max-width: 280px;
+}
+.newsCard03 .mainNews__card-title{
+  max-width: 400px;
+}
+.newsCard05 .mainNews__card-title{
+  max-width: 430px;
+}
+.mainNews__card-title{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;    
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mainNews__card-title h3{
+  font-size: 24px;
+}
+.mainNews__card-desc{
+  max-height: 0;
+  font-size: 16px;
+  opacity: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  transform: translateY(6px);
+  transition: var(--transition-035);
+}
+@media (hover: hover) and (pointer: fine){
+  .mainNews__card:hover .mainNews__card-desc{
+    max-height: 120px; 
+    opacity: 1;
+    transform: translateY(0);
+    margin: 8px 0 56px 0;
+  }
+}
+.mainNews__card.active .mainNews__card-desc {
+  max-height: 120px;
+  opacity: 1;
+  transform: translateY(0);
+  margin: 8px 0 42px 0;
+}
+/* 바로가기 버튼 */
+.news-btn-wrap{
+  display: grid;
+  transition: var(--transition-035);
+}
+.news-btn-link{
+  width: fit-content;
+  padding: 6px 12px;
+  position: absolute;
+  bottom: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: var(--transition-035);
+  border: 2px solid var(--white-100);
+  border-radius: var(--border-radius-20);
+}
+@media (hover: hover) and (pointer: fine){
+  .mainNews__card:hover .news-btn-link{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.mainNews__card.active .news-btn-link {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.news-btn-link,
+.news-btn-link:hover,
+.news-btn-link:active{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.news-btn-link span{
+  font-size: 14px;
+  font-weight: 800;
+}
+.news-btn-link i{
+  font-size: 20px;
+}
+.br-pc{
+  display: block;
+}
+
+
+/* 랩탑 사이즈에서 보정 */
+@media (max-width: 1780px){
+  #bannerSwiper, .gameCD-top-swiper, .gameCD-bottom-swiper{
+    width: 90%;
+  }
+  :where(.gameCD-top-swiper, .gameCD-bottom-swiper) .swiper-wrapper{
+    gap: 0;
+  }
+}
+
+/* ========== Tab Size ========== */
+@media all and (max-width: 1024px){
+  /* === section: 메인 비주얼 === */
+  #mainSwiper{
+    width: 100%;
+  }
+  #mainSwiper :where(.swiper-button-next, .swiper-button-prev){
+    padding: 0 60px;
+  }
+
+
+  /* === section: PS 기기 애니메이션 === */
+  .console__content{
+    width: 100%;
+  }
+  .console__content::before{
+    width: 80%;
+  }
+  .console__content__visual{
+    width: 80%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+
+  /* === section: 듀얼센스 애니메이션 === */
+  .controller__bgLayer{
+    width: 100px;
+    left: 50%;
+    top: 45%;
+  }
+  .controller__title{
+    text-align: center;
+  }
+  .controller__title br{
+    display: none;
+  }
+  .controller__content{
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+  }
+  .controller__content__visual{
+    width: 80%;
+    margin-top: 0;
+  }
+  .controller__content__info__wrap{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .controller__content__info{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    top: 0;
+    z-index: 1;
+  }
+  .content__info__bg,
+  .content__info__video{
+    width: 55%;
+    aspect-ratio: 16 / 10;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+  }
+  .content__info__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .content__info__video video{
+    width: 92%;
+    height: 100%;
+    clip-path: polygon(
+      4% 0%, 96% 0%, 100% 6%, 100% 30%, 96% 36%, 96% 64%, 100% 70%, 100% 94%, 
+      96% 100%, 4% 100%, 0% 94%, 0% 70%, 4% 64%, 4% 36%, 0% 30%, 0% 6%
+    );
+  }
+  .content__info__video::before{
+    display: none;
+  }
+  .content__info__text-box{
+    width: 45%;
+    text-align: left;
+  }
+  .controller__content__info img{
+    width: 55%;
+  }
+  .gif__text{
+    width: 100%;
+    position: static;
+  }
+
+
+
+  /* === section: 헤드셋 애니메이션 === */
+  #audioSec{
+    height: auto;
+    padding: 0;
+  }
+  .audio{
+    width: 150%;
+    padding: 80px 0;
+    border-radius: 0;
+    display: flex; /* 암시적 */
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: circle(100% at 50% 50%);
+  }
+  .audio__content{
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .audio__text-box{
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .audio__text-box .text--l{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .audio__visual{
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .audio__visual img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+
+
+  /* === section: PlayStation 장점 === */
+  #psBenefitSec h2{
+    font-size: 64px;
+    margin: 0 auto 32px auto;
+  }
+  #psBenefitSec h2 br{
+    display: inline;
+  }
+  .benefit__content{
+    aspect-ratio: 1 / 0.9;
+  }
+  .benefit__item-wrap .swiper-wrapper{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+  .benefit{
+    max-width: 50%;
+    height: calc((100% - 2*24px)/3);
+    gap: 10px;
+  }
+  .benefit:nth-child(3){
+    min-width: 100%;
+  }
+  .benefit:not(:last-child){
+    border-right: none;
+  }
+  .benefit:is(:nth-child(1), :nth-child(4)){
+    border-right: 1px solid var(--white-100);
+  }
+  .benefit:nth-child(3){
+    border-top: 1px solid var(--white-100);
+    border-bottom: 1px solid var(--white-100);
+  }
+  .benefit__play{
+    width: 48px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .benefit__play img{
+    width: 24px;
+  }
+
+
+  /* === section: 게임 cd 전시 === */
+  #bannerSwiper{
+    width: 100%;
+    height: 100%;
+  }
+  #bannerSwiper .swiper-slide{
+    width: 100%;
+    height: 170px;
+  }
+  #bannerSwiper .swiper-slide:not(.banner04)::after{
+    width: 100%;
+    height: 100%;
+  }
+  #bannerSwiper .banner01 img{
+    object-position:  center 20%;
+  }
+  #bannerSwiper .banner02 img{
+    object-position: bottom;
+  }
+  #bannerSwiper .banner03 img{
+    object-position: center 30% ;
+  }
+  #bannerSwiper .banner04 img{
+    object-position: center 30% ;
+  }
+  .banner-Swiper__content{
+    padding: 0 120px;
+  }
+  .banner-Swiper__title{
+    font-size: 24px;
+  }
+  .banner-Swiper__desc{
+    font-size: 16px;
+  }
+  #bannerSwiper .br-t{
+    display: block;
+  }
+
+  /* 게임 CD 전시 */
+  .gameCD__display-top{
+    padding-top: 90px;
+    padding-bottom: 32px;
+  }
+  .gameCD__display-bottom{
+    padding-top: 32px;
+    padding-bottom: 90px;
+  }
+  :where(.gameCD__display-top, .gameCD__display-bottom)::before{
+    height: 360px;
+  }
+  :where(.gameCD__display-top, .gameCD__display-bottom)::after{
+    font-size: 112px;
+  }
+  :where(.gameCD-top-swiper, .gameCD-bottom-swiper) .swiper-slide{
+    min-width: 324px;
+  }
+  :where(.gameCD-top-swiper, .gameCD-bottom-swiper) .swiper-slide::before{
+    width: 24px;
+  }
+  .swiper-slide > [class*="game-cd--"]{
+    width: calc(100% - 24px);
+  }
+  .game-cd__content{
+    padding: 8px 0;
+  }
+  .disc__center{
+    width: 72px;
+  }
+  [class*="disc__shape"]{
+    width: 40px;
+  }
+  .disc__ps5{
+    height: 64px;
+  }
+  .disc__ps5 img{
+    width: 92px;
+  }
+  .game-cd__info-wrap{
+    width: 110px;
+    gap: 6px;
+  }
+  .game-cd__name{
+    width: 130%;
+    padding: 6px;
+    font-size: 16px;
+  }
+  .game-cd__dev{
+    font-size: 10px;
+  }
+  .game-cd__star{
+    font-size: 24px;
+  }
+  .game-cd__star .bi{
+    width: 20px;
+    font-size: 20px;
+  }
+  .game-cd__price{
+    padding: 4px 6px;
+  }
+  .game-cd__price .total{
+    font-size: 18px;
+  }
+  .game-cd__price .original{
+    font-size: 10px;
+  }
+  .game-cd__discount{
+    font-size: 32px;
+  }
+  .game-cd-hover{
+    display: none;
+  }
+
+
+  /* === section: 독점작 게임 === */
+  #exclusiveSec h1{
+    font-size: 64px;
+    margin: auto;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  #exclusiveThumbSwiper{
+    height: 75%;
+    margin-bottom: 24px;
+  }
+  #exclusiveThumbSwiper .swiper-wrapper{
+    width: 100%;
+    margin-left: 0; 
+  }
+  #exclusiveThumbSwiper .swiper-slide{
+    flex: none;
+    width: 100%;
+    transform: skewX(0deg);
+  }
+  #exclusiveThumbSwiper .swiper-slide::before{
+    inset: 0;
+    transform: skewX(0deg);
+  }
+  #exclusiveThumbSwiper .swiper-slide::after{
+    display: none;
+  }
+  #exclusiveRowSwiper{
+    display: block;
+    height: 25%;
+  }
+  #exclusiveRowSwiper .swiper-slide{
+    width: 58%;
+    position: relative;
+  }
+  #exclusiveRowSwiper .swiper-slide::after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-duration: var(--transition-025);
+  }
+  #exclusiveRowSwiper .swiper-slide-thumb-active::after{
+    opacity: 0;
+  }
+  
+
+
+  /* === section: 요금제 안내 === */
+  #psPlusSec .inner{
+    width: 100%;
+    margin: 0;
+  }
+  #planSwiper{
+    padding-bottom: 50px;
+  }
+  #planSwiper .swiper-wrapper{
+    justify-content: flex-start;
+    gap: 0;
+  }
+  #planSwiper .swiper-slide{
+    width: auto;
+  }
+  .content__card{
+    width: 100%;
+    margin-top: 260px;
+  }
+  .content__card__top{
+    width: 100%;
+    height: 280px;
+  }
+  .top__img{
+    width: 60%;
+    top: 0;
+  }
+  .top__text .title--m{
+    font-size: 18px;
+  }
+  .top__text .text--m{
+    font-size: 16px;
+  }
+  .top__arrow{
+    width: 48px;
+  }
+  .content__card__bottom{
+    height: 1050px;
+  }
+  .bottom__text{
+    gap: 16px;
+  }
+  .bottom__text__line{
+    gap: 16px;
+  }
+  .bottom__text__line p{
+    font-size: 18px;
+  }
+  .bottom__text__line i{
+    font-size: 20px;
+  }
+  .bottom__boxs label{
+    width: 95%;
+  }
+  .bottom__box{
+    width: 100%;
+    padding: 10px 5px;
+    gap: 12px;
+  }
+  .box__text__top{
+    gap: 6px;
+  }
+  .box__text .title--s{
+    font-size: 18px;
+  }
+  .box__text .title--m{
+    font-size: 20px;
+  }
+  .box__text .text--s{
+    font-size: 12px;
+  }
+  #planSwiper .swiper-pagination{
+    display: block;
+  }
+
+  /* === section: 소식과 뉴스 === */
+  .mainNews__grid{
+    grid-template-rows: 300px 300px;
+  }
+  .br-pc{
+    display: none;
+  }
+  .mainNews__card-desc{
+    font-size: 14px;
+  }
+  .news-btn-link{
+    padding: 2px 4px 2px 8px;
+  }
+}
+
+
+
+/* ========== Mobile Size ========== */
+@media all and (max-width: 768px){
+  /* === section: 메인 비주얼 === */
+  #mainSwiper :where(.swiper-button-next, .swiper-button-prev){
+    width: 18px;
+    height: 40px;
+    padding: 0 18px;
+  }
+  #mainSwiper .swiper-pagination{
+    gap: 4px;
+  }
+  #mainSwiper .swiper-pagination-bullet{
+    width: 56px;
+    height: 4px;
+    margin-bottom: 40px;
+  }
+
+
+  /* === section: PS 기기 애니메이션 === */
+  .console__content__title,
+  .controller__title,
+  .audio__title,
+  .plus h2{
+    font-size: 32px;
+    text-align: center;
+  }
+  .console__content{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 40px;
+  }
+  .console__content::before{
+    width: 280px;
+  }
+  .console__content__visual{
+    width: 240px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+
+
+
+  /* === section: 듀얼센스 애니메이션 === */
+  .controller__bgLayer,
+  .controller__content__bgItem1,
+  .controller__content__bgItem2{
+    display: none;
+  }
+  .controller__content{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .controller__title .mo__br {
+    display: inline;
+  }
+  .controller__title .pc__br {
+    display: none;
+  }
+  .controller__content__visual{
+    width: 100%;
+    height: auto;
+  }
+  .controller__content__info__wrap{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .controller__content__info{
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .content__info__bg,
+  .content__info__video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .content__info__video video{
+    width: 91%;
+    height: 90%;
+  }
+  .content__info__video::before{
+    width: 91%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: block;
+    position: absolute;
+    z-index: 2;
+    clip-path: polygon(
+      4% 0%, 96% 0%, 100% 6%, 100% 30%, 96% 36%, 96% 64%, 100% 70%, 100% 94%, 
+      96% 100%, 4% 100%, 0% 94%, 0% 70%, 4% 64%, 4% 36%, 0% 30%, 0% 6%
+    );
+    content: '';
+    
+  }
+  .content__info__text-box{
+    width: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+  }
+  .content__info__text-box .title--l{
+    font-size: 16px;
+  }
+  .content__info__text-box .text--l{
+    font-size: 12px;
+  }
+  .controller__content__info:has(img){
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .controller__content__info img{
+    width: 100%;
+    height: auto;
+  }
+  .gif__text{
+    width: 80%;
+    margin-top: 10px;
+    color: var(--white-100);
+    position: static;
+  }
+
+
+  /* === section: 헤드셋 애니메이션 === */
+  #audioSec{
+    height: auto;
+  }
+  .audio{
+    width: 120%;
+    height: auto;
+    aspect-ratio: auto;
+    padding: 60px 20px;
+    display: flex; /* 암시적 */
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: none;
+  }
+  .audio__text-box .text--l{
+    width: 100%;
+    font-size: 14px;
+  }
+  .audio__content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .audio__visual{
+    width: 100%;
+    height: auto;
+  }
+  .audio__visual img{
+    max-width: 300px;
+  }
+
+
+
+  /* === section: PlayStation 장점 === */
+  #psBenefitSec h2{
+    font-size: 24px;
+    margin: 0 auto 24px auto;
+  }
+  .benefit__content{
+    aspect-ratio: 1 / 1.1;
+  }
+  .benefit__item-wrap .swiper-wrapper{
+    display: block;
+  }
+  .benefit{
+    max-width: unset;
+    width: 100%;
+    height: 100%;
+    border: none !important;
+    gap: var(--basic-gap);
+  }
+  .benefit__title{
+    font-size: 20px;
+  }
+  .benefit__desc{
+    font-size: 14px;
+  }
+  .benefit__play{
+    width: 36px;
+  }
+  .benefit__play img{
+    width: 20px;
+  }
+
+
+  /* === section: 게임 cd 전시 === */
+  #bannerSwiper{
+    margin-bottom: 72px;
+  }
+  #bannerSwiper .swiper-wrapper{
+    width: 100%;
+  }
+  #bannerSwiper .swiper-slide{
+    width: 100%;
+    height: 100px;
+  }
+  #bannerSwiper .swiper-button-next, 
+  #bannerSwiper .swiper-button-prev{
+    width: 30px;
+    height: 30px;
+  }
+  .banner-Swiper__title{
+    text-align: center;
+    font-size: 18px;
+  }
+  .banner-Swiper__desc{
+    display: none;
+    font-size: 12px;
+  }
+  .banner-Swiper__content{
+    padding: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 0;
+  }
+  #bannerSwiper .br-m{display: block;}
+
+  /* 게임 CD 전시 */
+  #gameCDSec [class*="tab-wrap"]{
+    margin-bottom: 48px;
+  }
+  .gameCD__display-top{
+    padding-top: 42px;
+    padding-bottom: 24px;
+  }
+  .gameCD__display-bottom{
+    padding-top: 24px;
+    padding-bottom: 42px;
+  }
+  :where(.gameCD__display-top, .gameCD__display-bottom)::before{
+    height: 290px
+  }
+  :where(.gameCD__display-top, .gameCD__display-bottom)::after{
+    font-size: 54px;
+  }
+
+
+  /* === section: 독점작 게임 === */
+  #exclusiveSec h1{
+    font-size: 24px;
+  }
+  #exclusiveThumbSwiper{
+    height: 80%;
+    margin-bottom: 12px;
+  }
+  #exclusiveRowSwiper{
+    height: 20%;
+  }
+  #exclusiveRowSwiper .swiper-slide{
+    width: 35%;
+  }
+
+  /* === section: 요금제 안내 === */
+  .plus h2{
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  #planSwiper .swiper-slide{
+    width: auto;
+  }
+  .content__card{
+    margin-top: 130px;
+  }
+  .content__card__top{
+    height: 230px;
+  }
+  .content__card__bottom {
+    max-height: 900px;
+  }
+  .top__img{
+    top: 0;
+  }
+  .top__text{
+    padding: 0 14px;
+    margin-bottom: 20px;
+    gap: 6px;
+  }
+  .top__text .title--m{
+    font-size: 14px;
+  }
+  .top__text .text--m{
+    font-size: 12px;
+  }
+  .top__arrow{
+    width: 32px;
+  }
+  .top__arrow i{
+    font-size: 16px;
+  }
+  .bottom__text{
+    gap: 12px;
+  }
+  .bottom__text__line{
+    gap: 12px;
+  }
+  .bottom__text__line p{
+    font-size: 14px;
+  }
+  .bottom__text__line i{
+    font-size: 16px;
+  }
+  .bottom__boxs label{
+    width: 90%;
+  }
+  .bottom__box{
+    width: 100%;
+    padding: 15px 10px;
+  }
+  .box__text__top {
+    gap: 6px;
+  }
+  .box__text .title--s{
+    font-size: 12px;
+  }
+  .box__text .title--m{
+    font-size: 14px;
+  }
+  .box__text .text--s{
+    font-size: 10px;
+  }
+  .bottom__boxs{
+    gap: 20px;
+  }
+  .bottom__boxs input{
+    width: 16px;
+  }
+  .bottom__boxs input[type="radio"]:checked::before{
+    width: 8px;
+    height: 8px;
+  }
+  .wrap__bottom .text--xs{
+    padding-left: 20px;
+  }
+  .top__text br{
+    display: none;
+  }
+  #planSwiper .swiper-pagination-bullet {
+    width: 40px;
+    height: 5px;
+  }
+  #planSwiper .swiper-pagination-bullet-active {
+    width: 40px;
+  }
+
+
+  /* === section: 소식과 뉴스 === */
+  .mainNews__header-title{
+    padding-bottom: 18px;
+  }
+  .mainNews__header-title h2{
+    font-size: 24px;
+  }
+  .mainNews__grid{
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3, 150px);
+    grid-template-areas:
+    "n1 n1 n2 n2 n2"
+    "n3 n3 n3 n3 n3"
+    "n4 n4 n4 n5 n5"
+  }
+  .mainNews__card-content{
+    padding: 18px;
+  }
+  .mainNews__card-title h3{
+    font-size: 12px;
+  }
+  .mainNews__card-title{
+    transition: var(--transition-035);
+  }
+  .mainNews__card.active .mainNews__card-title{
+    transform: translateY(-24px);
+  }
+  .mainNews__card-desc{
+    display: none;
+    font-size: 12px;
+  }
+  .news-btn-link{
+    padding: 2px 2px 2px 6px;
+    border: 1px solid var(--white-100);
+  }
+  .mainNews__card.active .news-btn-link {
+    transform: translateY(16px);
+    opacity: 1;
+  }
+  .news-btn-link span{
+    font-size: 10px;
+  }
+  .news-btn-link i{
+    font-size: 12px;
+  }
+  .br-m{
+    display: block;
+  }
+}

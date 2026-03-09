@@ -1,0 +1,128 @@
+:root{
+  /* Main Color */
+  --blue-100: #E8F1FF;
+  --blue-200: #C6DCFF;
+  --blue-300: #9BBEFF;
+  --blue-400: #5A8BFF;
+  --blue-500: #2563EB;
+  --blue-600: #1E40AF;
+
+  --black-100: #F5F5F5;
+  --black-200: #E0E0E0;
+  --black-300: #BDBDBD;
+  --black-400: #757575;
+  --black-500: #424242;
+  --black-600: #121212;
+
+  --white-100: #FFFFFF;
+
+  /* Accent Color */
+  --yellow-100: #FFFBEB;
+  --yellow-200: #FEF3C7;
+  --yellow-300: #FDE68A;
+  --yellow-400: #FACC15;
+  --yellow-500: #EAB308;
+  --yellow-600: #A16207;
+
+  --red-100: #FFECEC;
+  --red-200: #FFCDCD;
+  --red-300: #FF9B9B;
+  --red-400: #FF5C5C;
+  --red-500: #EF4444;
+  --red-600: #B91C1C;
+
+  /* Sub Color */
+  --green-100: #ECFDF5;
+  --green-200: #CFFAEA;
+  --green-300: #9AE6B4;
+  --green-400: #4ADE80;
+  --green-500: #22C55E;
+  --green-600: #15803D;
+
+  --purple-100: #F5F3FF;
+  --purple-200: #EDE9FE;
+  --purple-300: #DDD6FE;
+  --purple-400: #A78BFA;
+  --purple-500: #8B5CF6;
+  --purple-600: #6D28D9;
+
+  --cyan-100: #ECFEFF;
+  --cyan-200: #CFFAFE;
+  --cyan-300: #A5F3FC;
+  --cyan-400: #22D3EE;
+  --cyan-500: #06B6D4;
+  --cyan-600: #0E7490;
+
+  /* border-radius */
+  --border-radius-6: 6px;
+  --border-radius-10: 10px;
+  --border-radius-12: 12px;
+  --border-radius-16: 16px;
+  --border-radius-20: 20px;
+  --border-radius-24: 24px;
+
+  /* transition */
+  --transition-015: 0.15s;
+  --transition-025: 0.25s;
+  --transition-035: 0.35s;
+
+  /* Display Basic grid gap */
+  /* 화면 디자인에서 그리드 컬럼에 맞춰 사이즈를 지정한 경우에만 사용 */
+  /* 수치가 우연히 일치하는 부분에는 사용하지 않음 */
+  --basic-gap: 24px;
+
+  /* grid column */
+  /* 화면 디자인에서 grid column을 차지하는 개수를 의미 */
+  /* 디자인할 때 너비를 gird column 개수에 맞춘 경우에만 사용 */
+  --column-1: calc((1600px - 11*var(--basic-gap)) / 12);
+  --column-2: calc((1600px - 5*var(--basic-gap)) / 6);
+  --column-3: calc((1600px - 3*var(--basic-gap)) / 4);
+  --column-4: calc((1600px - 2*var(--basic-gap)) / 3);
+  --column-5: calc((1600px - 2*var(--basic-gap) - var(--column-2)) / 2);
+  --column-6: calc((1600px - var(--basic-gap)) / 2);
+  --column-7: calc(1600px - var(--basic-gap) - var(--column-5));
+  --column-8: calc(1600px - var(--basic-gap) - var(--column-4));
+  --column-9: calc(1600px - var(--basic-gap) - var(--column-3));
+  --column-10: calc(1600px - var(--basic-gap) - var(--column-2));
+  --column-11: calc(1600px - var(--basic-gap) - var(--column-1));
+  --column-12: 1600px;
+}
+
+@media all and (max-width: 1024px){
+  :root{
+    --basic-gap: 20px;
+
+    --column-1: calc((100% - 5*var(--basic-gap)) / 6);
+    --column-2: calc((100% - 2*var(--basic-gap)) / 3);
+    --column-3: calc((100% - var(--basic-gap)) / 2);
+    --column-4: calc(100% - var(--basic-gap) - var(--column-2));
+    --column-5: calc(100% - var(--basic-gap) - var(--column-1));
+    --column-6: 100%;
+    --column-7: 100%;  /* column 7부터는 모두 6과 동일 */
+    --column-8: 100%;
+    --column-9: 100%;
+    --column-10: 100%;
+    --column-11: 100%;
+    --column-12: 100%;
+
+  }
+}
+
+@media all and (max-width: 768px){
+  :root{
+    --basic-gap: 12px;
+
+    --column-1: calc((100% - 3*var(--basic-gap)) / 4);
+    --column-2: calc((100% - var(--basic-gap)) / 2);
+    --column-3: calc(100% - var(--basic-gap) - var(--column-1));
+    --column-4: 100%;
+    --column-5: 100%;  /* column 5부터는 모두 4과 동일 */
+    --column-6: 100%;
+    --column-7: 100%;
+    --column-8: 100%;
+    --column-9: 100%;
+    --column-10: 100%;
+    --column-11: 100%;
+    --column-12: 100%;
+  }
+}
